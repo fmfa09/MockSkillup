@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9c8eb5c2478f261062c4995b116d434b" extends="sys_user" label="Equipe" max_length="40" name="x_967632_mock_skil_equipe" type="collection">
+        <element label="Data de desligamento" max_length="40" name="data_de_desligamento" type="glide_date"/>
+        <element choice="1" label="Cargo" max_length="40" name="cargo" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Gestor"/>
+                <element inactive_on_update="false" label="Monitor"/>
+                <element inactive_on_update="false" label="-- New choice --" value="-- New choice --"/>
+                <element inactive_on_update="false" label="Estagiário"/>
+            </choice>
+        </element>
+        <element label="Salario" max_length="20" name="salario" type="currency"/>
+        <element label="Ativo" max_length="40" name="ativo" type="boolean"/>
+        <element label="CPF" max_length="14" name="cpf" type="string"/>
+        <element label="Data de admissão" max_length="40" name="data_de_admissao" type="glide_date"/>
+    </element>
+</database>
