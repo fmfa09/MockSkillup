@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="curso" label="Curso" language="en" table="x_967632_mock_skil_certificados">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>curso</element>
+            <help/>
+            <hint/>
+            <label>Curso</label>
+            <language>en</language>
+            <name>x_967632_mock_skil_certificados</name>
+            <plural>Cursos</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 15:09:16</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Curso</sys_name>
+            <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+            <sys_update_name>sys_documentation_x_967632_mock_skil_certificados_curso_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 15:09:16</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

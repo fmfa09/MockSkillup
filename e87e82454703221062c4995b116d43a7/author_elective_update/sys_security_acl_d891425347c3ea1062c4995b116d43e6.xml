@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Default access control on x_967632_mock_skil_progresso</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_967632_mock_skil_progresso</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 11:44:42</sys_created_on>
+        <sys_id>d891425347c3ea1062c4995b116d43e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_967632_mock_skil_progresso</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sys_security_acl_d891425347c3ea1062c4995b116d43e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 11:44:42</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</application>
+        <file_path/>
+        <instance_id>4fa07d8bfbd06a101feef633beefdc0d</instance_id>
+        <instance_name>dev303432</instance_name>
+        <name>sys_security_acl_d891425347c3ea1062c4995b116d43e6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description>Default access control on x_967632_mock_skil_progresso</description><local_or_existing>Local</local_or_existing><name>x_967632_mock_skil_progresso</name><operation display_value="write">write</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-04 11:44:42</sys_created_on><sys_id>d891425347c3ea1062c4995b116d43e6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_967632_mock_skil_progresso</sys_name><sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope><sys_update_name>sys_security_acl_d891425347c3ea1062c4995b116d43e6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-04 11:44:42</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-1095882491</payload_hash>
+        <record_name>x_967632_mock_skil_progresso</record_name>
+        <reverted_from/>
+        <source>4ecb35ce474f261062c4995b116d43eb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 11:44:42</sys_created_on>
+        <sys_id>d891425347c3ea1062c4995b116d43e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19874e5ed290000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 11:44:42</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>dc9142530ec3ea10a32ad7c721d345e8</update_guid>
+        <update_guid_history>dc9142530ec3ea10a32ad7c721d345e8:-1095882491</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 11:49:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>5f01577ccecc4e9ebcd94318edc6f4b1</sys_id>
+        <sys_metadata>d891425347c3ea1062c4995b116d43e6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_967632_mock_skil_progresso</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_parent display_value="">9c91425347c3ea1062c4995b116d43f4</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_scope_delete display_value="">096cc9fb91d943a8934a24cf7fb94464</sys_scope_delete>
+        <sys_update_name>sys_security_acl_d891425347c3ea1062c4995b116d43e6</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_d891425347c3ea1062c4995b116d43e6">d891425347c3ea1062c4995b116d43e9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 11:49:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

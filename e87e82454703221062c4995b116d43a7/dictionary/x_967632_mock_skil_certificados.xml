@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="721d2e574787ea1062c4995b116d43dd" label="Certificados" max_length="40" name="x_967632_mock_skil_certificados" type="collection">
+        <element label="Data de Emissão" max_length="40" name="data_de_emissao" type="glide_date"/>
+        <element label="Curso" max_length="40" name="curso" reference="x_967632_mock_skil_cursos" type="reference"/>
+        <element label="Estagiário" max_length="40" name="estagiario" reference="x_967632_mock_skil_equipe" type="reference"/>
+        <element label="Quantidade de Horas" max_length="40" name="quantidade_de_horas" type="glide_duration"/>
+    </element>
+</database>

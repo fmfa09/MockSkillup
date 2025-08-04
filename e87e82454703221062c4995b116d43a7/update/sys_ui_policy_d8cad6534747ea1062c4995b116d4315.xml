@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_967632_mock_skil_equipe">cargo=Estagiário^EQ<item display_value="Estagiário" endquery="false" field="cargo" goto="false" newquery="false" operator="=" or="false" value="Estagiário"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+  g_form.hideRelatedList('u_progresso_curso.curso');
+}
+function onReverseCondition() {
+  g_form.showRelatedList('u_progresso_curso.curso');
+}]]></script_true>
+        <set_values/>
+        <short_description>Na tabela Equipe, quando o tipo de usuário for Estagiário, a Related List deverá exibir os cursos atribuídos e o progresso correspondente</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 13:36:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d8cad6534747ea1062c4995b116d4315</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Na tabela Equipe, quando o tipo de usuário for Estagiário, a Related List deverá exibir os cursos atribuídos e o progresso correspondente</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sys_ui_policy_d8cad6534747ea1062c4995b116d4315</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 14:02:23</sys_updated_on>
+        <table>x_967632_mock_skil_equipe</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>
