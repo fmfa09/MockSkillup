@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0fa65fef474f2e1062c4995b116d4393" label="M2M_Alocados" max_length="40" name="x_967632_mock_skil_m2m_alocados" type="collection">
+        <element label="Equipe" max_length="40" name="equipe" reference="x_967632_mock_skil_equipe" reference_qual="cargo=Estagiário^EQ" reference_qual_condition="cargo=Estagiário^EQ" type="reference"/>
+        <element label="Projeto" max_length="40" name="projeto" reference="x_967632_mock_skil_projeto" type="reference"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Em andamento" sequence="200" value="Em andamento"/>
+                <element inactive_on_update="false" label="Aberto" sequence="100" value="Aberto"/>
+                <element inactive_on_update="false" label="Cancelado" sequence="300" value="Cancelado"/>
+                <element inactive_on_update="false" label="Concluído" sequence="400" value="Concluído"/>
+            </choice>
+        </element>
+        <element label="Tarefa" max_length="40" name="tarefa" reference="x_967632_mock_skil_tarefa_do_projeto" type="reference"/>
+    </element>
+</database>

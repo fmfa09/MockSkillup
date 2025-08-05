@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="89f037a347036e1062c4995b116d43e8" extends="sys_import_set_row" label="skill import set" max_length="40" name="x_967632_mock_skil_skill_import_set" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Level type" label="Level type" max_length="40" name="u_level_type" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Name" label="Name" max_length="42" name="u_name" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a7787b2b47036e1062c4995b116d435c" extends="task" label="Serviço Compartilhado" max_length="40" name="x_967632_mock_skil_servi_o_compartilhado" type="collection">
+        <element label="Item de Catalogo" max_length="40" name="item_de_catalogo" reference="sc_cat_item" type="reference"/>
+        <element label="Solicitante" max_length="40" name="solicitante" type="string"/>
+    </element>
+</database>

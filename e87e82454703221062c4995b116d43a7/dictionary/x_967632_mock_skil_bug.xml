@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e89ab7af47036e1062c4995b116d4353" label="Bug" max_length="40" name="x_967632_mock_skil_bug" type="collection">
+        <element label="Descrição" max_length="8000" name="descricao" type="html"/>
+        <element label="Projeto" max_length="32" name="projeto" reference="x_967632_mock_skil_projeto" type="reference"/>
+        <element label="Solicitante" max_length="40" name="solicitante" type="string"/>
+        <element label="Assigned to" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Short description" max_length="100" name="short_description" type="string"/>
+        <element choice="1" label="Gravidade" max_length="40" name="gravidade" type="choice">
+            <choice/>
+        </element>
+        <element label="Passos para reproduzir o bug" max_length="8000" name="passos_para_reproduzir_o_bug" type="html"/>
+        <element label="Tarefa" max_length="32" name="tarefa" reference="x_967632_mock_skil_tarefa_do_projeto" type="reference"/>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+        <index name="index2">
+            <element name="projeto"/>
+        </index>
+        <index name="index3">
+            <element name="tarefa"/>
+        </index>
+    </element>
+</database>

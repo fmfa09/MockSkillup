@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="34e3b76747036e1062c4995b116d43c0" label="Aviso" max_length="40" name="x_967632_mock_skil_aviso" type="collection">
+        <element label="Urgente" max_length="40" name="urgente" type="string"/>
+        <element label="Ativo" max_length="40" name="ativo" type="boolean"/>
+        <element label="Aviso" max_length="40" name="aviso" type="string"/>
+        <element choice="1" label="Categoria" max_length="40" name="categoria" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Evento" sequence="100" value="Evento"/>
+                <element inactive_on_update="false" label="Informação" sequence="200" value="Informação"/>
+            </choice>
+        </element>
+        <element label="Projeto" max_length="40" name="projeto" reference="x_967632_mock_skil_projeto" type="reference"/>
+        <element label="Descrição" max_length="40" name="descricao" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0deee3ef47cf2e1062c4995b116d43c9" label="Skill" max_length="40" name="x_967632_mock_skil_skill" type="collection">
+        <element choice="1" label="Nivel" max_length="40" name="nivel" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Intermediate" sequence="200" value="Intermediate"/>
+                <element inactive_on_update="false" label="Basic" sequence="100" value="Basic"/>
+                <element inactive_on_update="false" label="Advanced" sequence="300" value="Advanced"/>
+            </choice>
+        </element>
+        <element label="Skill" max_length="255" name="skill" type="string"/>
+        <element choice="1" label="Technical" max_length="40" name="technical" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="General" sequence="100" value="General"/>
+                <element inactive_on_update="false" label="Language" sequence="300" value="Language"/>
+                <element inactive_on_update="false" label="Technical" sequence="200" value="Technical"/>
+            </choice>
+        </element>
+    </element>
+</database>

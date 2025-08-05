@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f4e357ab474f2e1062c4995b116d4314" extends="task" label="Tarefa do Projeto" max_length="40" name="x_967632_mock_skil_tarefa_do_projeto" type="collection">
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Concluído" sequence="400" value="Concluído"/>
+                <element inactive_on_update="false" label="Aberto" sequence="100" value="Aberto"/>
+                <element inactive_on_update="false" label="Em andamento" sequence="200" value="Em andamento"/>
+                <element inactive_on_update="false" label="Cancelado" sequence="300" value="Cancelado"/>
+            </choice>
+        </element>
+        <element label="Prioridade" max_length="40" name="prioridade" type="integer"/>
+        <element label="Hora Estimada" max_length="40" name="hora_estimada" type="glide_duration"/>
+        <element label="Nome da Tarefa" max_length="255" name="nome_da_tarefa" type="string"/>
+        <element label="Data de Inicio" max_length="40" name="data_de_inicio" type="glide_date"/>
+        <element label="Projeto" max_length="40" name="projeto" reference="x_967632_mock_skil_projeto" type="reference"/>
+        <element label="Hora Trabalhada" max_length="40" name="hora_trabalhada" type="glide_duration"/>
+        <element label="Dependencias" max_length="40" name="dependencias" type="string"/>
+        <element label="Data de finalizcao" max_length="40" name="data_de_finalizcao" type="glide_date"/>
+    </element>
+</database>
