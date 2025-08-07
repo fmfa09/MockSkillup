@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Envio de certificados">00ad204c47d7ae1062c4995b116d43c7</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-06 17:11:38</sys_created_on>
+        <sys_id>099f9100475fae1062c4995b116d43bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Envio de certificados</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_099f9100475fae1062c4995b116d43bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-06 17:11:38</sys_updated_on>
+    </sc_cat_item_catalog>
+</record_update>
