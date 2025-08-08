@@ -6,7 +6,11 @@
         <element label="Assigned to" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
         <element label="Short description" max_length="100" name="short_description" type="string"/>
         <element choice="1" label="Gravidade" max_length="40" name="gravidade" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Media" value="Media"/>
+                <element inactive_on_update="false" label="Baixa" value="Baixa"/>
+                <element inactive_on_update="false" label="Alta" value="Alta"/>
+            </choice>
         </element>
         <element label="Passos para reproduzir o bug" max_length="8000" name="passos_para_reproduzir_o_bug" type="html"/>
         <element label="Tarefa" max_length="32" name="tarefa" reference="x_967632_mock_skil_tarefa_do_projeto" type="reference"/>
