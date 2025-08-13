@@ -16,7 +16,7 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>bugs_equipe</internal_name>
-        <label_cache>[{"name":"2305e4aa-016a-45b2-8cd7-4cf26430b765.Record.assigned_to.sys_id","label":"3 - Look Up Record➛Tarefa do Projeto Record➛Assigned to➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id","usedInstances":{"c0b1b122-ee94-4f65-84a7-5a524d6b590d":["assigned_to"]}},{"name":"366e1a2c-d53e-4b45-88ed-02fe132a6d32.Record.tarefa.sys_id","label":"1 - Look Up Record➛Bug Record➛Tarefa➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_967632_mock_skil_tarefa_do_projeto","column_name":"sys_id","usedInstances":{}},{"name":"366e1a2c-d53e-4b45-88ed-02fe132a6d32.Record.tarefa.assigned_to","label":"1 - Look Up Record➛Bug Record➛Tarefa➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_967632_mock_skil_tarefa_do_projeto","column_name":"assigned_to","usedInstances":{"5f93ce54-d91a-4e44-ba65-371e19dc7724":["assigned_to"]}},{"name":"366e1a2c-d53e-4b45-88ed-02fe132a6d32.Record.assigned_to.sys_id","label":"1 - Look Up Record➛Bug Record➛Assigned to➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id","usedInstances":{"5f21fa2a-d1d2-4a6c-b772-ae5f1dde60ab":["conditions"],"3fa99e87-1314-478f-9f4b-ddcf205fed7c":["conditions"]}},{"name":"366e1a2c-d53e-4b45-88ed-02fe132a6d32.Record.gravidade","label":"1 - Look Up Record➛Bug Record➛Gravidade","reference":"","reference_display":"Gravidade","type":"choice","base_type":"choice","parent_table_name":"x_967632_mock_skil_bug","column_name":"gravidade","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"used":false,"label":"Alta","image":"","reference":false,"rawLabel":"Alta","selected":false,"missing":false,"value":"Alta","parameters":{"name":"x_967632_mock_skil_bug","dependent_values":[""]}},{"used":false,"label":"Baixa","image":"","reference":false,"rawLabel":"Baixa","selected":false,"missing":false,"value":"Baixa","parameters":{"name":"x_967632_mock_skil_bug","dependent_values":[""]}},{"used":false,"label":"Media","image":"","reference":false,"rawLabel":"Media","selected":false,"missing":false,"value":"Media","parameters":{"name":"x_967632_mock_skil_bug","dependent_values":[""]}}],"usedInstances":{"e8ebb52a-aeac-4d5e-9025-012fccb65c88":["condition"]}},{"name":"366e1a2c-d53e-4b45-88ed-02fe132a6d32.Record.assigned_to","label":"1 - Look Up Record➛Bug Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_967632_mock_skil_bug","column_name":"assigned_to","usedInstances":{"2e57c16d-be3c-4ff3-9bf2-cfb5d942a0f6":["assigned_to"]}},{"name":"3fa99e87-1314-478f-9f4b-ddcf205fed7c.Record","label":"6 - Look Up Record➛Equipe Record","reference":"x_967632_mock_skil_equipe","reference_display":"Equipe Record","type":"reference","base_type":"reference","usedInstances":{"08203f67-d4be-42b0-ac1d-4312de6c1a37":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3fa99e87-1314-478f-9f4b-ddcf205fed7c.Record.email","label":"6 - Look Up Record➛Equipe Record➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"x_967632_mock_skil_equipe","column_name":"email","usedInstances":{"08203f67-d4be-42b0-ac1d-4312de6c1a37":["ah_to"]}},{"name":"3fa99e87-1314-478f-9f4b-ddcf205fed7c.Record.first_name","label":"6 - Look Up Record➛Equipe Record➛Nome","reference":"","reference_display":"Nome","type":"string","base_type":"string","parent_table_name":"x_967632_mock_skil_equipe","column_name":"first_name","usedInstances":{"08203f67-d4be-42b0-ac1d-4312de6c1a37":[null]}},{"name":"812fb507-8b06-4401-8041-5ce55c58074d.Record.sys_id","label":"9 - Look Up Record➛Equipe Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_967632_mock_skil_equipe","column_name":"sys_id","usedInstances":{"4c313329-e5ee-4247-9f30-8e6216b9245e":["assigned_to"]}},{"name":"812fb507-8b06-4401-8041-5ce55c58074d.Record.first_name","label":"9 - Look Up Record➛Equipe Record➛Nome","reference":"","reference_display":"Nome","type":"string","base_type":"string","parent_table_name":"x_967632_mock_skil_equipe","column_name":"first_name","usedInstances":{"f6620c15-14f4-487e-9f35-d8ce87274788":[null]}},{"name":"812fb507-8b06-4401-8041-5ce55c58074d.Record.email","label":"9 - Look Up Record➛Equipe Record➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"x_967632_mock_skil_equipe","column_name":"email","usedInstances":{"f6620c15-14f4-487e-9f35-d8ce87274788":["ah_to"]}},{"name":"2305e4aa-016a-45b2-8cd7-4cf26430b765.Record","label":"3 - Look Up Record➛Tarefa do Projeto Record","reference":"x_967632_mock_skil_tarefa_do_projeto","reference_display":"Tarefa do Projeto","type":"reference","base_type":"reference","usedInstances":{"c0b1b122-ee94-4f65-84a7-5a524d6b590d":["assigned_to"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2305e4aa-016a-45b2-8cd7-4cf26430b765.Record.assigned_to","label":"3 - Look Up Record➛Tarefa do Projeto Record➛Assigned to","reference":"sys_user","reference_display":"Assigned to","type":"reference","base_type":"reference","parent_table_name":"x_967632_mock_skil_tarefa_do_projeto","column_name":"assigned_to","usedInstances":{"c0b1b122-ee94-4f65-84a7-5a524d6b590d":["assigned_to"]}},{"name":"366e1a2c-d53e-4b45-88ed-02fe132a6d32.Record","label":"1 - Look Up Record➛Bug Record","reference":"x_967632_mock_skil_bug","reference_display":"Bug","type":"reference","base_type":"reference","usedInstances":{"c0b1b122-ee94-4f65-84a7-5a524d6b590d":["assigned_to"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2305e4aa-016a-45b2-8cd7-4cf26430b765.Record.assigned_to.user_name","label":"3 - Look Up Record➛Tarefa do Projeto Record➛Assigned to➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name","usedInstances":{"c0b1b122-ee94-4f65-84a7-5a524d6b590d":["assigned_to"]}},{"name":"Created_1.current.tarefa.sys_id","label":"Trigger - Record Created➛Bug Record➛Tarefa➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_967632_mock_skil_tarefa_do_projeto","column_name":"sys_id","usedInstances":{"2305e4aa-016a-45b2-8cd7-4cf26430b765":["conditions"]}}]</label_cache>
+        <label_cache>[{"name":"fa396a35-6baf-4baf-a572-ec89c43989f7.Record","label":"2 - Look Up Record➛Equipe Record","reference":"x_967632_mock_skil_equipe","reference_display":"Equipe Record","type":"reference","base_type":"reference","usedInstances":{"4ac3a577-d3fa-4a02-b942-28a06b080db0":["assigned_to"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8039ac19-d9aa-434f-97b2-c61a762c64e1.Record.email","label":"7 - Look Up Record➛Equipe Record➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"x_967632_mock_skil_equipe","column_name":"email","usedInstances":{"e0e0ad2b-94a2-4b26-a0da-dae303431527":["ah_to"]}},{"name":"8039ac19-d9aa-434f-97b2-c61a762c64e1.Record.sys_id","label":"7 - Look Up Record➛Equipe Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_967632_mock_skil_equipe","column_name":"sys_id","usedInstances":{"46dd28d5-7d4e-499a-afb7-8c53608028e8":["assigned_to"]}},{"name":"Created_1.current.projeto.gerente.sys_id","label":"Trigger - Record Created➛Bug Record➛Projeto➛Gerente➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_967632_mock_skil_equipe","column_name":"sys_id","usedInstances":{"8039ac19-d9aa-434f-97b2-c61a762c64e1":["conditions"]}},{"name":"c4b8177b-ffd9-4aa7-b303-94f164671e68.record.description","label":"4 - Update Record➛Tarefa do Projeto Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_967632_mock_skil_tarefa_do_projeto","column_name":"description","usedInstances":{"b20572b8-201b-469e-964e-01912d34f912":[null]}},{"name":"fa396a35-6baf-4baf-a572-ec89c43989f7.Record.email","label":"2 - Look Up Record➛Equipe Record➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"x_967632_mock_skil_equipe","column_name":"email","usedInstances":{"b20572b8-201b-469e-964e-01912d34f912":["ah_to"]}},{"name":"c4b8177b-ffd9-4aa7-b303-94f164671e68.record.sys_id","label":"4 - Update Record➛Tarefa do Projeto Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_967632_mock_skil_tarefa_do_projeto","column_name":"sys_id","usedInstances":{}},{"name":"Created_1.current.tarefa.assigned_to.sys_id","label":"Trigger - Record Created➛Bug Record➛Tarefa➛Assigned to➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id","usedInstances":{"4ac3a577-d3fa-4a02-b942-28a06b080db0":["assigned_to"],"fa396a35-6baf-4baf-a572-ec89c43989f7":["conditions"]}},{"name":"Created_1.current.gravidade","label":"Trigger - Record Created➛Bug Record➛Gravidade","reference":"","reference_display":"Gravidade","type":"choice","base_type":"choice","parent_table_name":"x_967632_mock_skil_bug","column_name":"gravidade","choices":[{"label":"-- None --","used":false,"rawLabel":"-- None --","selected":false,"missing":false,"image":"","reference":false,"value":""},{"label":"Alta","used":false,"rawLabel":"Alta","selected":false,"missing":false,"image":"","reference":false,"value":"Alta","parameters":{"name":"x_967632_mock_skil_bug","dependent_values":[""]}},{"label":"Baixa","used":false,"rawLabel":"Baixa","selected":false,"missing":false,"image":"","reference":false,"value":"Baixa","parameters":{"name":"x_967632_mock_skil_bug","dependent_values":[""]}},{"label":"Media","used":false,"rawLabel":"Media","selected":false,"missing":false,"image":"","reference":false,"value":"Media","parameters":{"name":"x_967632_mock_skil_bug","dependent_values":[""]}}],"usedInstances":{"58057443-8b71-4ef2-8446-e76f45ad101b":["condition"],"c96b4bb3-b363-4d60-a5ad-1d400e178ebf":["condition"]}},{"name":"2305e4aa-016a-45b2-8cd7-4cf26430b765.Record.assigned_to.sys_id","label":"2 - Look Up Record➛Tarefa do Projeto Record➛Assigned to➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id","usedInstances":{"c0b1b122-ee94-4f65-84a7-5a524d6b590d":["assigned_to"]}},{"name":"3fa99e87-1314-478f-9f4b-ddcf205fed7c.Record","label":"3 - Look Up Record➛Equipe Record","reference":"x_967632_mock_skil_equipe","reference_display":"Equipe","type":"reference","base_type":"reference","usedInstances":{"08203f67-d4be-42b0-ac1d-4312de6c1a37":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3fa99e87-1314-478f-9f4b-ddcf205fed7c.Record.email","label":"3 - Look Up Record➛Equipe Record➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"x_967632_mock_skil_equipe","column_name":"email","usedInstances":{"08203f67-d4be-42b0-ac1d-4312de6c1a37":["ah_to"]}},{"name":"3fa99e87-1314-478f-9f4b-ddcf205fed7c.Record.first_name","label":"3 - Look Up Record➛Equipe Record➛Nome","reference":"","reference_display":"Nome","type":"string","base_type":"string","parent_table_name":"x_967632_mock_skil_equipe","column_name":"first_name","usedInstances":{"08203f67-d4be-42b0-ac1d-4312de6c1a37":[null]}},{"name":"2305e4aa-016a-45b2-8cd7-4cf26430b765.Record","label":"2 - Look Up Record➛Tarefa do Projeto Record","reference":"x_967632_mock_skil_tarefa_do_projeto","reference_display":"Tarefa do Projeto","type":"reference","base_type":"reference","usedInstances":{"c0b1b122-ee94-4f65-84a7-5a524d6b590d":["assigned_to"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2305e4aa-016a-45b2-8cd7-4cf26430b765.Record.assigned_to","label":"2 - Look Up Record➛Tarefa do Projeto Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_967632_mock_skil_tarefa_do_projeto","column_name":"assigned_to","usedInstances":{"c0b1b122-ee94-4f65-84a7-5a524d6b590d":["assigned_to"]}},{"name":"2305e4aa-016a-45b2-8cd7-4cf26430b765.Record.assigned_to.user_name","label":"2 - Look Up Record➛Tarefa do Projeto Record➛Assigned to➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name","usedInstances":{"c0b1b122-ee94-4f65-84a7-5a524d6b590d":["assigned_to"]}},{"name":"Created_1.current.tarefa.sys_id","label":"Trigger - Record Created➛Bug Record➛Tarefa➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_967632_mock_skil_tarefa_do_projeto","column_name":"sys_id","usedInstances":{"2305e4aa-016a-45b2-8cd7-4cf26430b765":["conditions"]}},{"name":"Created_1.current.projeto.gerente","label":"Trigger - Record Created➛Bug Record➛Projeto➛Gerente","reference":"","reference_display":"Gerente","type":"string","base_type":"string","parent_table_name":"x_967632_mock_skil_projeto","column_name":"gerente","usedInstances":{"46dd28d5-7d4e-499a-afb7-8c53608028e8":["assigned_to"]}},{"name":"46dd28d5-7d4e-499a-afb7-8c53608028e8.record.projeto.gerente","label":"8 - Update Record➛Bug Record➛Projeto➛Gerente","reference":"","reference_display":"Gerente","type":"string","base_type":"string","parent_table_name":"x_967632_mock_skil_projeto","column_name":"gerente","usedInstances":{}},{"name":"Created_1.current.tarefa.assigned_to","label":"Trigger - Record Created➛Bug Record➛Tarefa➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_967632_mock_skil_tarefa_do_projeto","column_name":"assigned_to","usedInstances":{"4ac3a577-d3fa-4a02-b942-28a06b080db0":["assigned_to"]}}]</label_cache>
         <latest_snapshot/>
         <master_snapshot/>
         <master_snapshot_digest/>
@@ -38,7 +38,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4f4564ec4713625062c4995b116d4389</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Bugs (Equipe)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
@@ -46,7 +46,7 @@
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>sys_hub_flow_4f4564ec4713625062c4995b116d4389</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 03:11:59</sys_updated_on>
+        <sys_updated_on>2025-08-13 20:19:20</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
@@ -260,7 +260,7 @@
         <trigger_type>record_create</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4f4564ec4713625062c4995b116d4389^sys_idNOT IN2cdfa86c4753625062c4995b116d4372,435ea8e84753625062c4995b116d43b2,435ea8e84753625062c4995b116d43b4,435ea8e84753625062c4995b116d43b5,4b5ea8e84753625062c4995b116d43b1,4b5ea8e84753625062c4995b116d43b3,4b5ea8e84753625062c4995b116d43b4,4b5ea8e84753625062c4995b116d43b5,6cdfa86c4753625062c4995b116d4371,875ea8e84753625062c4995b116d43b6,ca6860244753625062c4995b116d4369"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4f4564ec4713625062c4995b116d4389^sys_idNOT IN16384e524713a21062c4995b116d43ab,1e384e524713a21062c4995b116d43aa,96384e524713a21062c4995b116d43ac,9e384e524713a21062c4995b116d43ad,a11ac2164713a21062c4995b116d4368,a11ac2164713a21062c4995b116d4369,a91ac2164713a21062c4995b116d4368,ef3bce564713a21062c4995b116d432c"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
@@ -271,191 +271,23 @@
         <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
         <generation_source/>
         <order>4</order>
-        <parent_ui_id>e8ebb52a-aeac-4d5e-9025-012fccb65c88</parent_ui_id>
+        <parent_ui_id>58057443-8b71-4ef2-8446-e76f45ad101b</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:59:56</sys_created_on>
-        <sys_id>2cdfa86c4753625062c4995b116d4372</sys_id>
+        <sys_created_on>2025-08-13 19:55:33</sys_created_on>
+        <sys_id>16384e524713a21062c4995b116d43ab</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 03:11:59</sys_updated_on>
-        <ui_id>c0b1b122-ee94-4f65-84a7-5a524d6b590d</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1U32vbMBD+V4KfTbDjNGvythECe1gL3ehLV4QsnRNRWfIkOU1W+r/vJMtJ+mNdKIExmJ98p7vvvu/0oZuHRPBkloyBZ/k0n7AiL4pRlo3Ox3k5Kcp8xAsKkCdpomgNWGmAacMxXlPZ+gT+cmEbSbfX+wxbCckNqGR2c5smDTXY7MAks4dnR27bAJG0BImNc83aGpQbfJ4jxrHE+u6rntlzpn4GxjyiE+GTeOT55FmawMaB4oDjKiotpElNFadOm20yc6bFhAHKL5Xc7ipWQrlOaU03VvxE/HHm6ypAaSxuYReSuKF+OVowuGyc0KrLOFrKfnNatrW66CT43UJFW+kOdttaxIPGU/YkOobV15W+v+rnLYQK6iJbqRmVu4g6Z0TZOrD+OkBCWEpNm0aoJWmMXovQjFTq4VJiMKykvseZVizVkDLPe4gLosMF5uchfU2N8CK+IAw2Pwbx5Efr53YyImESNAfBJFwUllpmROM+IvAaIs3HNDqzPHvLAGy6v+8DzL07N2Q6+TApRqTW7I7YOyFJ2S5fevZTSL7Ptt/84MFFN/hY0k+afyMiGvdJLvr27GS+Pf9Lvo2M/jHj/smu2ejN9+rgpoND7YFVqfV8gBOnv7dZVvCXLn2t5J2ehRqBHQw66PRo9j3AQoDk9hU5vWnjALKOA3YP7smcm0+y8P1/d0/47t7+AmHem/kTCAAA</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2cdfa86c4753625062c4995b116d4372"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
-        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
-        <generation_source/>
-        <order>6</order>
-        <parent_ui_id>e8ebb52a-aeac-4d5e-9025-012fccb65c88</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:53:34</sys_created_on>
-        <sys_id>435ea8e84753625062c4995b116d43b2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 02:59:56</sys_updated_on>
-        <ui_id>3fa99e87-1314-478f-9f4b-ddcf205fed7c</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/9VYbW/iOBD+K1E+A5cQSKDfTttDWuluK3V7+6VXWU7sFKvGTm2nLUX89xvHCVDeS1lt96PteXlm5pmJnduZz4h/4ZNhMMyHw/4gCYIoCoI4jjIcpmkUZ2mQ4p7f8gWeUJA0OOUUlk+Yl3b9goZxEkddNJHZA9IPjCP6WLLCyhCmC46nP2rRv5r9bMw4UVT4F7d3Lb/ACkwbqvyL2dqRmRYUcZxSDuo31rP3zcJoHY36jfJmFNZBs0TCmZaKWCxBy6cvhgpCwVWOuaYtf4IFwUaq6WJHUUyuBF9ujJkwYNG3wi+avYL5QWDlcgphZdSdLZaozpHbzsaSZfSqMEwKt+OAukPJy4n45gKw2aU5Lrlpsgs7pQZ7tLCYLYgaUf59LJ+vG4cjJqrw6kMuM8wXK2yMYmlpqLa1oJxOwBCa4KJg4h4VSj6xShmwTDr3HBadnMtncKrZvejgzALvQIpwZwT7l9X2D6yYjeIfMAPKAIhxqDZySdeyVFVWnlDGS10dKCy0s+XPq1yhx9KidFHX8SGXIhDQmWKF+RMUnmgdyrzVELu/lyLDJSUyKQizPvUKu/VUI0b+K0GZzGZRHNMQd7M26Ue03Ut7/fZgQEk76OY0jLo4JlG3c00zYFAHaxs7JcjIjrMyn2+2xNntn9ZaX1ZjPzZvW5W3JbNusjd7dZOFZ2uyXhD8ojYzqvx8XXaob1zAB5onJHtJQJb11lIZ5DK30j2bfD+ZoSNGOXkz/I8A1yhfWbJ56XQX3pqgufWx9hXo/vZfgU9JTwBEkMs3E5yJ6iMMQM/D2/5eaqThGg+q8q/MfLuHdbbJXuwZ6b2ePmWrujb8PQJko/gdEHk3DuUW4M18bczX1I3ORt2o+z7qAnFuZwv0i6xtSXBz17Kla+RfrTxelwd2rSiE87sF9b+c5jN8r8+u9bnWm9G7mnOVWe7kcgfBznyT29FsrZ/Z3WNQrf0h16zomZF7apbeGykizTPmD9vOa3YteqgK78O3wnDvwyFduRWyHE2gTqyAq6qqbl4aYUVRLktBUH1JXdLG1i1nSptaeHOGXFNTKuFJaDnPjKlXSXsL6XNMliOiaxS/5l4TXo1BexCeV4XnLcJ7XzJ2zKPeGe96H5lHI8x4lXp4bBQrtaNKSbVjJh2o2p7yHzmwjgQVnhXUxyfaNr5vnWwHsP4WL9ePTp2M4rQHr7gkCsMgCAOSBIMkCQdxmsc46eXLRkNIiwzGIljOgRhgHjVEaKoabI4WNxtP/r0CM/ePUW3iWLyN8qUU9hHbTYxnAUOdvQbw4ZDqeZFKySkWS3r2f9nA+Cx/YEp2s54bt/X3tqL9rI95yf4V7LGkXy0pBjToDkKStQdJmLR7OYnbQ4L7bTxM+0lEaNbLT/8+3/0PT2VDPJAUAAA=</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=435ea8e84753625062c4995b116d43b2"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
-        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
-        <generation_source/>
-        <order>8</order>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:53:34</sys_created_on>
-        <sys_id>435ea8e84753625062c4995b116d43b4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 02:59:56</sys_updated_on>
-        <ui_id>eb37ea78-6de2-4e61-9b0c-70c80b84be0d</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/9VY227bMAz9FcPPaWbHiZ30bVsRYMC2Alu3l64QZEtOhCqSJ8m9ov8+yrKdNPemGdY9iuLlkDyimVw++oz4pz4ZBaN8NBoMkyCIoiCI4yjDYZpGcZYGKe77HV/gGQVNg1NO4XiDeWnPd2gUJ3HUQzOZXSN9zThKywkoEKYLju9/1nofKmE2ZZwoKvzTy6uOX2AFTg1V/unj0pW5LyjiOKUcbC9sTO+rBdDZG+8z41X8NkBzRMK5lopYLEHHp3eGCkIhVI65ph1/hgXBRqr7VqIoJueCzwVTJgx49K3ynWYP4H4YWL2cQloZdXftEdUFcuJsKllGzwvDpHASB9RdSl7OxFeXgC0tzXHJTVNakJQa/NHCYrYgakT596m8/dYEHDNRpVdfcplh3p6wMYqlpaHa9oJyOgNHaIaLgokJKpS8YZUxYJl1JxwO3ZzLWwiq2UR0cWaBd6FEuDsG+Vkl/okVs1l8ATdgDIAYh24jV3QtS1VV5QZlvNTVhcJCO1/+U1Ur9Lu0KF3WdX7IlQgUdKZYYd6DwQ2tU3nqNJQebKXIaE6JTArCbEy9wOuJwpAyJvRXCfbkPTd4ldTrlQ4j+cdFFPtmsNZ4XVo13Z/JarqHR6N7Pwj+EeGNKt8e33cx2CW8g8Yh2UoCMu+3lsogV7kFHq+S9mCGjhnl5NkY3gNcY3xuyeal95vw1gTNbYyledz77+fxm6QnACLI1ZsJzkT1OQSgx+HtYCs10nCJB1X756ytZFhnq+zFnpHew+FTtuprw989QDaG3wGRd+FQrgHezNfGfU3d6GjUjXovoy4Q5/KxRd9WbU2Bm63Htq7Rf7D6eFkf2LVgED5dtdT/eFjM8KUxezbm0tuMXvQ4F5nlbs42EOzIO9WGx9b5m697CqZ1POQeK7plZELNPHqjRaS5xfx63X3NrvYNVem9ej8Lt67w6cJ+xnI0gz6xApZGRTOggkZYUZTLUhBUr4tz2ti+5UxpUyuvzpBv1JRKeBKenGem1Ku0vVb7GJNlj+waw0+516RXY9AepOdV6Xltei8rxoZ51D/irveaeTTGjFelh7W/WOgdVUqqDTNpR9e2tH/PgbUnqPCooF4/0dbxfe1k24H1v/gN+dqpk1Gc9ns4TqIwDIIwIEkwTJJwGKd5jJN+Pn9oCGmRwVgEzzkQA9yjhghNV4PV0eJm48F/dMDMfTeuXeyLtzE+k8L+DO0lxrOAoc9eA3h3SvW8SKXkFIs5PQf/bGC8lf9CSnaxXBsn+ryuaX/rY16yH4L9LuknS4ohDXrDkGQnwyRMTvo5iU9GBA9O8CgdJBGhWT8//Pt89Qds3CaJFBQAAA==</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=435ea8e84753625062c4995b116d43b4"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
-        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
-        <generation_source/>
-        <order>10</order>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:53:34</sys_created_on>
-        <sys_id>435ea8e84753625062c4995b116d43b5</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 02:59:57</sys_updated_on>
-        <ui_id>4c313329-e5ee-4247-9f30-8e6216b9245e</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1UTW8aMRD9K2jPsPJ+suHWCiH10ERKq1zSyPLas2DF693aXgJF/Pfa+wEkaVMUIVWVyomZ9cy89/w89zuPM2/mxcBQcBWkNAqiKEQozOIgT6M8CFlEAAJv7ElSgj2pgFaK2XhNROMS9i/juhZke3fM0BUXTIH0ZvcPY68myhYbUN5s9+KT2daABclB2MJ5RZsSpBl9mtse5wIbqm8HZC+Ruhk2Zn13zF3SfnJ4AjT2YGNAMrDjCiI0jL2SSEZMpbbezKjGJhQQdiPF9nBixaXpmJZko/kP2z9G7lwBlhrtVTiEuFdoEKfiFG5qwyvZZQzJxaBcJZpSXncUnLZQkEaYE20bbftB7SA7EB3C4suqerod5i24bNn1aEVFiThExBjF88aAdtcBAlpRSlLXXC5xrao1b4stlNJfChv4haie7EzNl9In1OH2rUDEX9j8vE3fEcUdic+2jS3et+Tx98bN7Wj0gHHLuSWM24uyRzVVvDYfbOM19DD3496ZefKWAejV8b5Peh7ducFX6TSNQlxW9BHrRy5w3ixfe/Zjm3yfbb+6waPrbvC5oJ8V/4ZEb9xnud63ycV8m/0l3/aI/jHj/smuKHxzX53cdOtQfWJVoh0eYNhU3xqEIrbbZUFY5AmaTrIcpZM4RsEkQ3EwSSgkCU0yNI2Z3+09X2+13Wz7/WtvX67xO98HlBaOgVEHaHy2UkODBQfB9C+kGx5IPwCv+wGH5X6xVxKkqP393/EX3PEPPwFvg8gDfwgAAA==</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=435ea8e84753625062c4995b116d43b5"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
-        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
-        <generation_source/>
-        <order>5</order>
-        <parent_ui_id>e8ebb52a-aeac-4d5e-9025-012fccb65c88</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:53:34</sys_created_on>
-        <sys_id>4b5ea8e84753625062c4995b116d43b1</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 02:59:56</sys_updated_on>
-        <ui_id>b96cf7c5-3a85-487f-9f5d-86a21db71c99</ui_id>
+        <sys_updated_on>2025-08-13 20:17:18</sys_updated_on>
+        <ui_id>c4b8177b-ffd9-4aa7-b303-94f164671e68</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1UUW/aMBD+K5GfI5QQygpvkxjSHtZOXdWXrrKc+AJeHTuzHQqr+t93ThygXcdQhTRNGk/c5e6777v75NtHIjiZkhHwJJ2k4yJLs2yYJMPzUZqPszwd8owBpCQmilWAlQYKbTjGKyYbn8C/XNhass3NLlMsheQGFJne3sWkZgabHRgyfXzxyW1qoJLlILFxpoumAuWijzPEOJZY333VM3vJ1M/AmAd0KnwSP3k+aRITWDtQHHBcyaSFmFRMcea02ZCpMw0mDDB+qeRmW7EUynVKK7a24gfijxJfVwJKK8IWtiENG+qXo0UBl7UTWnUZx3LZb07LplIXnQS/WyhZI93ebhuLeFB7yp5Ex7D8stQPV/28uVCtusBW6oLJbcScMyJvHFh/DpDQLqVidS3UgtZGr0TbjFSqwUJiMCilfsCZVizUgBWe9wAXxAZzzM/a9A0zwov4hDDY/NSKp98bP7eTEQjTVnMrmLaHwlJbGFG79wi8gkDzKQ7OzM8OGaCY7O69h7lz55pOxu/G2ZBWurin9l5I6hhSY5Rrr/UbOP2rg6/bkojr6PO25G2WvvakoouO1LGCnjX/RmAw9bNc8PTZyTx9/pc8HRj9Y6b+k5WT4cG3bO/SrXvtno2tY66xX5skyfiHKvK39AJfse6Byjc6GCrEdxB1E+KjtfQAcwGS21fE9RYOA+gqDNg+zSfzcTpO2t//F/qEL/TdT2nUUPQ9CAAA</values>
     </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4b5ea8e84753625062c4995b116d43b1"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
-        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
-        <generation_source/>
-        <order>7</order>
-        <parent_ui_id>e8ebb52a-aeac-4d5e-9025-012fccb65c88</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:53:34</sys_created_on>
-        <sys_id>4b5ea8e84753625062c4995b116d43b3</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 02:59:56</sys_updated_on>
-        <ui_id>08203f67-d4be-42b0-ac1d-4312de6c1a37</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1YXW7jNhC+CqFnyyv/yVbytN100QX2D7vu9mGzECiSitlQolaikngDA33vEQoUvUAv0d6kJ+mQkiwrShytkw3Swk+Gh5yZbzjfzIj8eGlxah1YYzpz3CAc46kzGo4cZzb0vGDkhc5s6jkDQq2eFeOIwc6UEZnq/2dY5FpweTkKseex2dQejAZjezydhbYXjgObUhIOnUnI6JT03xm91Qo0Kc8SgZcfSgMgIQsuaMpi6+Djp56V4BR8KZZaB5dXltQyYb7AAROgeCRJHrFYoRdHYKNrHJX2HKcnTKF3VTxX49Ou4D8tnfhcC2FJw3J6FrtQLKYMnIZYZKxnRTimWMl0uZakDNM3sagFCx4rMPk0yyThWLEMqQVDLMJcoHOuFgijwn3f0vYuMv4FIIyG2lTI4BCIRsRjwikgsjbEfnmmsPyiXiYLyQl7kygu4+KgFQ5EdeZS5FH8uohaZ4WFOBdqIyt5BnZZosPUuFWaQwzh+4U8f1f5fc5jcyBlgEISLNb/sFIpD3KI0yRSMJzW9nwDSdsET0wwc8YRThIen/hJKs+4MQwwo/6JgD/9UMhz0M/4SdzHRMfUhwPH/ecgPzLiDzjlOsBXYAaUV+aA/M+5xlSE2HSu9/om77A1IylP1FMwfMbKEFa9sjwG3jZa0XFNnw2bdYlc+J47dUdDP5Lk1M9OufDZ55wnrF0M31fy3Upirt2j14X7rtAbyjeEUlZDQ1YWw+BOxTCHClBFKRbcR6qEsS6AmdMsgBuIf++EL4HuzPhvw2rIa+YXZC1jM85vZfttHHdcNwjcYDId1UTxSEinQejiKRnVxDiH1pVGOD31TevaIPqgTeiywnekMyg/eW7C63VGWSlDIxQ5ZeinCu62CEp+B1JCm4prcg/vRO6CiUhJBLkTS+jva89aWHd/tcAK8QxlkK4+mkvES/AbGj20lDmK8kzBNgUrjbJpjIzxg1RMmdpSenRt3v8TJXXX0pls77G4Jh5e+Eru+vHUN1xZrVC7yna2s1tdvoecxCdVTXYIf13Qsn0WZelllc2y8kbbK6/4GmkV3sbQcPZjozE2KBM84ia5RXXelfZ0a96Z00g1IRu0v8dLQJOKHSBVis+etfHdQMXxbkNgz8WH4+Jg68WPuY1cBw9Dxg6YKsXvrrAx2EbHyZ6Oj52Ok+2pJ41kZ3nwMyNqg5JzDN4xempi//tPM0KvcPS6LfcyzG9HvlZc474ulhvI6+7H+mP6dMVb0x0Om11J0uUGS49zxxmRBGmEtuLxMiIslVIFcAynZpEeW8fFNvY2ZV8wlahQyhIcIyJwllX7tBEfKKuRJ1yIYwtlainYer3I7AHcjASP2SGsExkDkRSj3OS12mkChGUDS5syeKvVy8uQ+irFcRbKNDrwhoE7nEw8OwzIwB57GD6bx7Ox7c7GoTfCw9CbzlarKojt4MEVQpgQlqisduGHeWwymQEmAKoZc1EpOg8cRpkrlilOK1NHIHoL9l/QLmEaKHaJ2fxiSEd6m6rWyrpsAnAXag0UruOKJ3YN1lwajHAuk6vbSlTV3gmy0UspT9GPSfnMa9g3dE/UISoe2try1zJinXBmcP1W1c62q0L3iVbuYAynqTzvfvymA9sEqkV9rVLD0z+//3YDzg1Bv99/ZIi+7myhHVbWTXJ3NQ+dXMkY1Vxsl7gfYoIp87uUo678Taw3WkOx3Ogm+iGJM9iP9CAojrAy8QZaP1pvRZUdlHByylIEQtQmKpx4oxbgf5caKNqwXcwWm0PpXaNxfQePpenfZcJ/+bVzRooMfF3WrgiGbhxkySHKIww4zswjmv6OCiVH2IzrYhfHBAb3IcUl958khY32h1g5Bb/VlLufwfNo+vq+se4b6yNvrP+7vvfXH1vanb46tnvcbjfJH+avXlb3yA4Xi/XjR3GtaN0zyhvkQkWivj9O7/j44U4mI3d/g9x8/UjO6ZCmMknK2O70AvLpX9KveEFTIgAA</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4b5ea8e84753625062c4995b116d43b3"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
-        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
-        <generation_source/>
-        <order>9</order>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:53:34</sys_created_on>
-        <sys_id>4b5ea8e84753625062c4995b116d43b4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 02:59:57</sys_updated_on>
-        <ui_id>812fb507-8b06-4401-8041-5ce55c58074d</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/9VYbW/iOBD+K1E+Uy4hQKDfTtvjtNLdVtrt7ZdeZTm2A1aNnTpOX9X/vuM4BgopUMpqux89npdnZh5PBi6fQk7D05COo3E+Hg9GaRQlSRQNhwnBcZYlQ5JFGe6HnVDiOQNNgzPB4HiLRWXP92g8TIdJD80VuUblNReI3VS8sDqUl4XAD98b1b+8nMy4oJrJ8PTyqhMWWINrw3R4+rR2ZR4KhgTOmADzCxs5+GJhdPZG/cJ4MwsbwB+RdK6VphZL1AnZvWGSMgiVY1GyTjjHkmKj9MNCohmm51IsBTMuDXgMrfJ9yR/B/SiyejmDtAhzd4sjamrkxGSmOGHnheFKOokD6i6VqObyi0vAVpfluBLGVxckVQn+WGExWxANovzbTN199QEnXNbpNZdCESwWJ2yM5lllWGl7wQSbgyM0x0XB5RQVWt3y2hiwzLtTAYduLtQdBC35VHYxscC7UCLcnYD8rBZ/x5rbLP4FN2AMgLiAbiNX9FJVuq7KLSKiKusLjWXpfIXPda3QTWVRuqyb/JArESiURPPC/AkGt6xJ5bnjiT3YSpHxkhJEScptzHKF3QTrqfq/Alv6Nyuh85usblM5jOCfVhHsi77VuC2lhuovZA3V46NRvR9Fv4jsRlcfj+u72OsS3kHhmG4lAV32u1TaIFe5FQ5vUvZghk44E/TFCN4DnDc+t2QLsofX8DYEzW2MtVnc++1n8YekJwCiyNWbS8Fl/SkEoMfh7WArNbJ4jQd1+5esrWW4JJvsxYFRwePhU7buq+fvHiC94TdAFFw4lC3A/Xz17hvqJkejbtJ7G3WBOJdPC/SLqrUU2G88tnVe/9Hq43V9YNeKQfx8taD+p8Nixm+N2bMx195m8qbHucosd3P2CsGOvE+98tg6P/N1z8C0iYfcY0V3nE6ZWUb3WlSZOyyu2+4bdi3eUJ3eu3ezeOv6nq3sZjxHc+gTL2Bh1IwAFUqENUO5qiRFzaq4pI3tW851aRrlzRnylZlKy0DBkwvMjAW1drDQPsZk2SM7b/g5D3x6DYYygPSCOr1gkd7bivHKPOofcdd7zzyaYC7q0sPKX6z0jmldr9BtM2lH17a0f8+BtSeo+Kig3j/R2vjeOtl2YP0tfj++d+oQhrN+Dw/TJI6jKI5oGo3SNB4Ns3yI036+fGgIlZLAWATPORAD3CNPBN/VaHO0uNl48J8cMHP/mDQu9sXrjc+UtD9Ee6kJLGDoc+AB706pmReZUoJhuaTn4JcNjI/yP0jFL9Zr40T/tDXtZ33MK/6f5DcV+2xJMWJRbxRTcjJK4/Skn9PhyZjiwQkeZ4M0oYz088O/z1c/AADXjVsWFAAA</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4b5ea8e84753625062c4995b116d43b4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=16384e524713a21062c4995b116d43ab"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
-        <generation_source/>
-        <order>11</order>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:53:34</sys_created_on>
-        <sys_id>4b5ea8e84753625062c4995b116d43b5</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 02:59:57</sys_updated_on>
-        <ui_id>64b3a7ec-c7a5-4ad3-9f2d-3daecaa34948</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1UUW/aMBD+K5GfI5QQygpvkxjSHtZOXdWXrrKc+AJeHTuzHQqr+t93ThygXcdQhTRNGk/c5e6777v75NtHIjiZkhHwJJ2k4yJLs2yYJMPzUZqPszwd8owBpCQmilWAlQYKbTjGKyYbn8C/XNhass3NLlMsheQGFJne3sWkZgabHRgyfXzxyW1qoJLlILFxpoumAuWijzPEOJZY333VM3vJ1M/AmAd0KnwSP3k+aRITWDtQHHBcyaSFmFRMcea02ZCpMw0mDDB+qeRmW7EUynVKK7a24gfijxJfVwJKK8IWtiENG+qXo0UBl7UTWnUZx3LZb07LplIXnQS/WyhZI93ebhuLeFB7yp5Ex7D8stQPV/28uVCtusBW6oLJbcScMyJvHFh/DpDQLqVidS3UgtZGr0TbjFSqwUJiMCilfsCZVizUgBWe9wAXxAZzzM/a9A0zwov4hDDY/NSKp98bP7eTEQjTVnMrmLaHwlJbGFG79wi8gkDzKQ7OzM8OGaCY7O69h7lz55pOxu/G2ZBWurin9l5I6hhSY5Rrr/UbOP2rg6/bkojr6PO25G2WvvakoouO1LGCnjX/RmAw9bNc8PTZyTx9/pc8HRj9Y6b+k5WT4cG3bO/SrXvtno2tY66xX5skyfiHKvK39AJfse6Byjc6GCrEdxB1E+KjtfQAcwGS21fE9RYOA+gqDNg+zSfzcTpO2t//F/qEL/TdT2nUUPQ9CAAA</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4b5ea8e84753625062c4995b116d43b5"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
-        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot/>
@@ -463,44 +295,20 @@
         <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
         <generation_source/>
         <order>3</order>
-        <parent_ui_id>e8ebb52a-aeac-4d5e-9025-012fccb65c88</parent_ui_id>
+        <parent_ui_id>58057443-8b71-4ef2-8446-e76f45ad101b</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:59:56</sys_created_on>
-        <sys_id>6cdfa86c4753625062c4995b116d4371</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_on>2025-08-13 19:55:33</sys_created_on>
+        <sys_id>1e384e524713a21062c4995b116d43aa</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 03:11:59</sys_updated_on>
-        <ui_id>2305e4aa-016a-45b2-8cd7-4cf26430b765</ui_id>
+        <sys_updated_on>2025-08-13 20:17:18</sys_updated_on>
+        <ui_id>4ac3a577-d3fa-4a02-b942-28a06b080db0</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/9VYbW/iOBD+K1E+Uy4hQKDfTq2QVrrbnnZ7+6VXWU7sFF+NnbWdthTx33ccJ4HyDmW13Y8ez8szM88MDncznxH/0ifDYJgNh71BHARRFAT9fpTiMEmifpoECe76LV/gCQVNgxNO4fiEeWHPL2jYj/tRB01k+oj0I+PIYEUzjIhEuZL/UyNBnTCdczz9Vlndlioekd4/jUo6ZpwoKvzLu/uWn2MFAQ1V/uVs5cpMc4o4TigvPQEe77MF1zo4lzfG67nZAPURCedaKmKxBC2fvhgqCIVQGeaatvwJFgQbqaaNRFFMbgRfCMZMGPDoW+UXzV7B/SCwehmFtFLq7pojqsrlxOlYspTe5IZJ4SQOqLuUvJiIzy4BW2ioa8FNXWiQFBr80dxitiAqRNnXsXz+UgccMVGmV11ymWLenLAxiiWFodr2gnI6AUdogvOciQfb4ydWGgOWSfuBw6GdcfkMQTV7EG2cWuBtKBFuj0B+XYq/YcVsFn+DGzAGQIxDt5ErupaFKqvyhFJe6PJCYaGdL39e1gp9LyxKl3WVH3IlAgWdKpabP8HgiVapzFs13Xs7KTJcUCKVgjAbUy9xXk81YuS/AozJbHYF3TaUoLCdFgqqadpuANpObT5fp//xDk4bjqtl9IdmvtF4UzmqMXkjq8YkPNuYdIPgFw2KUcXHm5N9zHcJ76F/SHaSgCz6raUyyFVuif/rhD6ZoSNGOXmzvg8AVxvfWLJ5yXQb3oqgmY2xssc7v/0e/5D0BEAEuXozwZkof0YB6Hl429tJjSRc4UHZ/qWtbWVYp+vsxZ6R3uvpW7bsa83fA0DWhl8BkXfrUG4AXu/X2n1F3ehs1I06x1EXiHM3a9A3VdtQ4Pq1ZFtX679afbyqD+xaMgjn9w31r06LGR4bs2NjrsxmdNRwLjPL3VxvIdiZ32Jbhq31M6d7DKZVPOSGFT0z8kDNInqtRaR5xvxx033FrmaGyvTe/a4Ldz79k6V3HcvQBPrEcnhsKpoCFTSCRxfKZCEIqp6ZC9rYvmVMaVMpr++QL9QUSngSRs4zY+qV2l6jfY7NckB2teGnzKvTqzBoD9LzyvS8Jr3jirFlH3XP+NZ7zz4aYcbL0sPnQr7UO6qUVFt20p6u7Wj/gQvrQFDhWUG9f6Nt4vvGzbYH62/x7fnerZNSnHQ7uB9HYRgEYUDiYBDH4aCfZH0cd7PFoCGkRQprETxnQAxwj2oi1F0N1leL240n/0ECO/ePUeXiULy18bUU9iu1ExvPAoY+ezXg/SlV+yKRklMsFvTs/bKF8VH+QynY7WptnOivTU37WT/mBftXsO8F/WRJMaBBZxCS9GIQh/FFNyP9iyHBvQs8THpxRGjazU7/fb7/AdNPc8ZoFAAA</values>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K8XPifFH4sR52wiBPayFbvSlK+Jauk5EZdmT5TRZyH+fZMtJ2m5dKIExmB+M77XuveccHel+53HmzbwRsiBMw4TGYRxHQRBNR2GWxFkYsRgQQ2/gSSjQrFRIS8VMvAbR2IT5ZLyuBGzvjhm64oIplN7s/mHgVaBMsUblzXYvfulthURAhsIUzkvaFCj11ae56XEusL76tkf2EqmdYWLmuhNuk+aXxRMGAw83GiVDMy4HUePAK0Ay0KXaejOtGpNQCOxGiu1hxYpL3TEtYFPzH6b/KLDrcjTUqFPhEBKnUC9OySneVJqXsstoyESvXCmaQl53FKy2mEMj9Im2TW36YWUhWxAdwvzLqny67ectuGzZObSipCAOEWiteNZorO12oMBWlAKqisslqVS55m2xgVL4S2ECPxflk5lZ86X0gVrcvhEI/IXJz9v0HShuSXw2bUzxviVPvjd2bkfDASYt55YwaTfKLK2p4pX+YBqv0cHcD5wzs/FbBqDpcb9Peh7duSFpMkniiBQlfST1Ixcka5avPfuxTb7Ptl/t4KvrbvC5oJ8V/4aEM+6znPPt+GK+nf4l3zpE/5hx/2TXIHrzvjrZ6dah9YlVobZ4kBFdfmuCIGa7XQ5xmkA8HiYZ5MORfcF4Eg2RTlM6itNpmk/87t7b71+b+gId33kisDA4NF51SAZna9M3WHAUrP6FWP2RcAPI2g04XOcXOxdhErTP/1v9grf6w0+efa0AcQgAAA==</values>
     </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6cdfa86c4753625062c4995b116d4371"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
-        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
-        <generation_source/>
-        <order>12</order>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:53:34</sys_created_on>
-        <sys_id>875ea8e84753625062c4995b116d43b6</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 02:59:57</sys_updated_on>
-        <ui_id>f6620c15-14f4-487e-9f35-d8ce87274788</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1YXXLbNhC+CobPokKJ+rWf0riZZiZ/k7jpQ5zhgABooQYJhgRtKx7P9L1H6Exv0FP0Jj1JFyAokpYt03Lscad6krjALr7d/XaX4OcLh1NnzxnRmTcJoxGeev7Q97zZcD4P/XnkzaZzb0Co03MSHDPYmTEiM/18ikWhBfCX8jwVePmplpAFFzRjibP3+UvPSXEGyoplzt7FlSW1TFkgcMgEKB5IUsQsUejVAdjoCqzSPsTZMVPoQwXwKmB9FDxTe0jAtRCWNCyv57BzxRLK4NAIi5z1nBgnFCuZLVeSjGH6LhG1YMETBSaf57kkHCuWI7VgiMWYC3TG1QJhVB7fd7S985x/Awj+UJuKGASBaEQ8IZwCIqchDmxMYflVvUwWkhP2LlVcJmWgFQ5FFXMpijh5W3qts8IiXAjVyEqRg12Wajc1bpUV4EP0cSHPPlTnvuSJCYh1UEiCxeoJK5XxsAA/TSIFw1ltLzCQtE04iQlmYhzjNOXJcZBm8pQbwwAz7h8LeOhHQp6Bfs6Pkz4m2qc+BBz3X4L8wIg/4YxrB9+AGVC+NAEKvhYaU+li+3C9NzB5h605yXiqnoPhU2ZduOxZvg/mm2hFRzV9GjYfhPOH2j56W9rviq2lfANWS/eWzLJ9cC+2HwLFVVlrJbmRsjBWDJ95bYbfwOzvzmgLdGtKPwxtIa95ULLR+mYOv5XOt5HYm0zCcBKOp35NlDmJ6DSMJnhK/JoYZ9CbshhnJ4HpTQ0mD9apbEt4SzqD8rOXxr1eZ5SVMnQ6UVCGfqngbvLA8juUEvpQUpN7eC9yl0xESiLInVhCA1+drIV1e1cLrBDPUQ7p6qNDibgF39DooaUsUFzkCrYpWGmVTWsmjB6lYmxqrfTg2rz/J0rqvqUz3txjcU08vAiUbBTMxcVsMIzCsTd1Z6E3cUcjb+DOvNHAHRM2HpPxzJuOaL98C+kbrlxeovUq29rOdnX5EXKSHFc12cH9VUHL9VjY0ssrm7by/M2VV75urBVeY2h4u7HRGhuUCR5zk9yyOu9Le7ox78xrpZqQh3njaVOxA6RK8cWLdXw3UHG03RDYcfHxuDjYeLNjk1auw8chYwdMleIPV9gYbqLjeEfHp07H8ebUk1ay8yL8lRH1GJTsgGuluEJ1HdIbqDnZDe2n9GKKN6Y7GrZ7jqTLBgePCs/zSYo0QlfxZBkTlkmpQgjDiVmkR85RuY29z9g3TCUqlfIUJ4gInOfVPm0kAMpq5CkX4shBuVoKtlovM7sH9x7BE7YP60QmQCTFKDd5rXYaB2HZwNKmDN5q9eIiooHKcJJHMov3PDKlmOCxG/nToTuajiMXD2a+GxLq48nMH85xeHlZObEZPByFECaEpSqvjwiiIjGZzAETANWMOa8UvUd2w+aK5YrTytQBiN6D/Ve0i5sGimsxm18M6chuU9VaeZdNAO5crYDCZVvx1K3BmiuBER7K9Oo2i6raO0Muei3lCfo5tV9pDfuGk2O1j378WvCUrcvfyph1wpnD5VpVO9ePKnWfaeUOxnCWybPu4Tcd2CVQLequSq2T/vnzjxtwNgT9fv+JIbpbbKEdVtZNcrc1D51cyQTVXFwv8SCCIqQs6FKOuvKbWG+0hhLZ6Cb6MxFnsB/pQVCGsDLxDlo/Wm1FlR2UcnLCMgRCtE5UiHirFuC5Sw2UbdgtZ4vLofSu0bi+gyfS9G+b8N9+75yRMgN3y1pDgIoYw+Gn5rsYjHsICEfYzOiy/jkmMK33Kbaqaam3/q5lJ99DTbbvM2yeTC/fNdNdM33izfT/1Ov+/uuaBrfd1fGnwzevq4tjh5vE6ltGeY9Yu1jYK+NCxaK+ME7v+S1jMh77k92VsfkxIz2jQ5rJNLW+3euDxpd/AXbYVS/UIQAA</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=875ea8e84753625062c4995b116d43b6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1e384e524713a21062c4995b116d43aa"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
         <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
@@ -510,26 +318,146 @@
         <display_text/>
         <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
         <generation_source/>
-        <order>1</order>
-        <parent_ui_id/>
+        <order>2</order>
+        <parent_ui_id>58057443-8b71-4ef2-8446-e76f45ad101b</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:27:33</sys_created_on>
-        <sys_id>ca6860244753625062c4995b116d4369</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_created_on>2025-08-13 19:55:33</sys_created_on>
+        <sys_id>96384e524713a21062c4995b116d43ac</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 02:59:56</sys_updated_on>
-        <ui_id>366e1a2c-d53e-4b45-88ed-02fe132a6d32</ui_id>
+        <sys_updated_on>2025-08-13 20:19:19</sys_updated_on>
+        <ui_id>fa396a35-6baf-4baf-a572-ec89c43989f7</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/9VYy27bOhD9FUFrx5UsW7KzaxsYKNA2QJt2kxsQlEjZRGhSpag8kX+/Q1GUHb/jOGi65HAeZ2YOR2NfPvqM+Kc+GQWjfDQaDJMgiKIgiOMow2GaRnGWBinu+x1f4BkFTY1TTuF4g3llzndoFCdx1EMzmV2j8ppxlFYTUCCsLDi+/93ofaqF2ZRxoqjwTy+vOn6BFTjVVPmnj0tX+r6giOOUcrC9MDG97wZAZ2+8z4xX8ZsA7oiEdS0VMViCjk/vNBWEQqgc85J2/BkWBGup7luJopicCz4XTJnQ4NE3ynclewD3w8Do5RTSyqi9a4+oKZAVZ1PJMnpeaCaFlVig9lLyaia+2wRMaWmOK65daUFSleCPFgazAdEgyn9O5e0PF3DMRJ1ec8llhnl7wlorllaalqYXlNMZOEIzXBRMTFCh5A2rjQHLrDvhcOjmXN5C0JJNRBdnBngXSoS7Y5Cf1eLfWDGTxTdwA8YAiHHoNrJFL2Wl6qrcoIxXZX2hsCitL/+prhX6UxmUNusmP2RLBAplplihP4LBDW1Seeo4Sg+2UmQ0p0QmBWEmZrnA61UGH0zfz4v+98W21ngd4IbIz2QNkcOjEbkfBH+JylpV74/Ju7hpE95B0JBsJQGZ97uUSiNbubdh6JhRTp4N2D3AOeNzQzYvvd+EtyFobmIsTdrePz9p3yU9ARBBtt5McCbqDx0APQ5vB1upkYZLPKjbP2dtLcNltspe7GnpPRw+Zeu+Ov7uAdIZ/gRE3oVFuQa4m6/OfUPd6GjUjXovoy4Q5/KxRd9WbU2B3T5jWuf0H4w+XtYHdi0YhE9XLfU/HxYzfGnMnom59DajFz3ORWbZm7MNBDvytrThsXXe8nVPwbSJh+xjRbeMTKieR3daROpbzK/X3Tfsat9Qnd6rN69w63KeLmxeLEcz6BMrYB1UNAMqlAgrinJZCYKaRXBOG9O3nKlSN8qrM+QH1ZUSnoQn5+kp9Wptr9U+xmTZIztn+CX3XHoNhtKD9Lw6Pa9N72XF2DCP+kfc9V4zj8aY8br0sNAXC72jSkm1YSbt6NqW9u85sPYEFR4V1Osn2jq+r51sO7D+E78OXzt1MorTfg/HSRSGQRAGJAmGSRIO4zSPcdLP5w8NoVJkMBbBcw7EAPfIEcF1NVgdLXY2HvwXBszcD+PGxb54nfGZFP9VQdBLtGcAQ589B3h3Ss28SKXkFIs5PQd/bWC8l385KnaxXBsr+rquaW/1Ma/YL8H+VPSLIcWQBr1hSLKTYRImJ/2cxCcjggcneJQOkojQrJ8f/n2++h/5/Eb47hMAAA==</values>
+        <values>H4sIAAAAAAAA/9VYbW/iOBD+K1E+Uy4hQKDfTu0hrXS3lXZ7+6VXWU7sFKvGTm2nLUX89xvHSaC8F1ht96PH8/LMzDODw93MZ8S/9MkwGGbDYW8QB0EUBUG/H6U4TJKonyZBgrt+yxd4QkHT4IRTOD5jXtjzKxr2437UQROZPiL9yDiiTwXLrQ5hOud4+qNS/auWp2PGiaLCv7y7b/k5VuDaUOVfzlauzDSniOOEcjC/tZG9rxZG62DU74zXs7AB6iMSzrVUxGIJWj59NVQQCqEyzDVt+RMsCDZSTRuJopjcCL4QjJkw4NG3yq+avYH7QWD1MgpppdTdNUdU1ciJ07FkKb3JDZPCSRxQdyl5MRFfXQK2ujTDBTd1dUFSaPBHc4vZgqgQZd/H8uVbHXDERJledcllinlzwsYolhSGatsLyukEHKEJznMmHlCu5DMrjQHLpP3A4dDOuHyBoJo9iDZOLfA2lAi3RyC/LsU/sGI2i3/ADRgDIMah28gVXctClVV5RikvdHmhsNDOlz8va4WeCovSZV3lh1yJQEGniuXmTzB4plUq81ZN7N5OigwXlEilIMzG1Evs1lONGPmvAGMym11Btw0lKGynhYJqmrbBgA63sbaJwo2RbWcyn6/z/zRnxw3N1XJWh1Zko/GmMlXj805WjU94tvHpBsEvGiCjis83P/smwiW8ZyxCspMEZNFvLZVBrnJLc7FO7qMZOmKUk3dr/QBwtfGNJZuXTLfhrQia2Rgr+73z2+/3T0lPAESQqzcTnIny5xWAnoe3vZ3USMIVHpTtX9rmVoZ1us5e7BnpvR2/Zcu+1vw9AGRt+B0QebcO5Qbg9X6t3VfUjc5G3ajzMeoCce5mDfqmahsKXL+ibOtq/Terj1f1gV1LBuH8vqH+1XExw4/G7NiYK7MZfWg4l5nlbq63EOzMb7Qtw9b6mdM9BtMqHnLDil4YeaBmEb3WItK8YP646b5iVzNDZXonv/fCnZ8EydJ7j2VoAn1iOTxCFU2BChrBAwxlshAEVc/PBW1s3zKmtKmU13fIN2oKJTwJI+eZMfVKba/RPsdmOSC72vBL5tXpVRi0B+l5ZXpek97HirFlH3XP+NY7ZR+NMONl6eEzIl/qHVVKqi07aU/XdrT/wIV1IKjwrKBO32ib+L5xs+3B+lt8k566dVKKk24H9+MoDIMgDEgcDOI4HPSTrI/jbrYYNIS0SGEtgucMiAHuUU2EuqvB+mpxu/HoP05g5/4xqlwcirc2vpbCfrF2YuNZwNBnrwa8P6VqXyRScorFgp69X7YwPst/KwW7Xa2NE/29qWk/68e8YP8K9lTQL5YUAxp0BiFJLwZxGF90M9K/GBLcu8DDpBdHhKbd7Pjf5/v/AV4sCEZqFAAA</values>
     </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ca6860244753625062c4995b116d4369"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=96384e524713a21062c4995b116d43ac"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>58057443-8b71-4ef2-8446-e76f45ad101b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-13 19:55:33</sys_created_on>
+        <sys_id>9e384e524713a21062c4995b116d43ad</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-13 20:03:41</sys_updated_on>
+        <ui_id>b20572b8-201b-469e-964e-01912d34f912</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1XUW/bNhD+K4SeHUW2bNlKn7oGwQqsLdC63UNXCCeKstlRoiZRdtwgP6gD9ivyx3aUKMuKG9ezl6AF/JJYJO/uu7vvO0ofbyweWRfWMJo4XhgPYey4A9dxJgPfD10/diZj3+nTyOpZKSQMT+aMylw/L0CUegF/RrzIBKw+tCt0zkWUs9S6+PipZ2WQo7FiuXVxc29LrTIWCAiZQMNLScuEpYq8vEQf+wJrrKeQz5gibxuA9wHrUPgcmSAB14u4pWE5PYtdK5ZGDIPGIArWsxJII1AyX61XcgbRm1S0C3OeKnT5vCgk5aBYQdScEZYAF2TJ1ZwAqcPblvZ3XfAvCMEdaFcxwyJQjYinlEeIyNpYDkxNcftlu03nklP2JlNcpnWhFYSiqbkUZZK+rrPWXWExlEJtdKUs0C/LdJoat8pLzCF+N5fLt03cK55WBTEJCklBrJ9AqZyHJeZZNVIwyFt/QQVJ+8RITLCqxglkGU9nQZbLBa8cI8zEngl8sGMhl2hf8FlqA9U52VhwsK9w/bJa/gA51wm+QjdofFsVKPir1JjqFLvB9dmg6jseLWjOM/UcHS+YSeG2Z/je93fRKhq29Nnw+Sicn2r/5HXtf19sHeMHsBq6d9YM2/tHsX2KFFe11mpyE2VgrBk+cboMf4DZ/zujDdCDKf04tMW+FkHNRpNbFfy7dP4eiR3PC0MvHI3dlig+jaNxGHswpm5LjCXOpjyB/M+gmk0bTO5vU9lI+EA6o/H5VZVeb2+UjTFOOlFGjPzewN2VgeF3KCXOobQl9+AoctdMJEoS7J1Y4QBfR9aL7XhXc1CEF6TAdtlkKgk34DcsemQlS5KUhcJjCnc6suncCcMnUYxprVm9/GbffwpJHSud0e4ZCy3xYB4ouSGYm5sYXN8Dd3TmhRCfDfUfGI0HZ4xOfDp0/Ykfj+36LcSuuHJ7S7ZVdrCfw3T5DnuSzhpN7pH+WtByuxZGekXj0yjP3a28+nVjS3gbl4ZzujY610bEBE941dxancfSPtrZd+Z0Wk3p47zxdKm4B6TG8MWLbXwPUHF42CVw4uLTcbG/88uOeZ1eh09Dxj0wNYa/3GNjuIuOoxMdf3Q6jna3nnaaXZThZ0bVU1ByD1xrwzWqbyF9gJre6dL+kV5MYWe740F35shotcHBP0rHcWlW/WPvE5LKhSRhOSP4VTLLAbMD/BUCv4bzRJ8aeAwo1uNZxIHEkhOoClRvcbOFX0JkIak5T3lOn9l1pHMTapv7/wnJ3ddu+Lt/mph3f29HOkxTv05f/dYoao8Sr4d8XeCtihstzVUiWiWNjxzy3mjkeictbU75bBkNolxmmcntqEn/6V+1maUJ7RYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9e384e524713a21062c4995b116d43ad"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>aea105eb-472a-4340-87fa-07844bdc2dec</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-13 20:03:41</sys_created_on>
+        <sys_id>a11ac2164713a21062c4995b116d4368</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-13 20:08:45</sys_updated_on>
+        <ui_id>46dd28d5-7d4e-499a-afb7-8c53608028e8</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXW/aMBT9KyjPIcpXA+FtE0Law1qpm/rSVZZj34BVJ85sh8IQ/3124gBttw5VSNOk8cS98b33nOPje7/zGPVmXgo0jPIoI0mUJHEYxtM0KrKkiGKaYIDI870aV2BOSiBCUhOvMW9twvylTDUcb++OGbJinEqovdn9g+81WJpiDdKb7V580tsGEMcFcFM4F6StoNajT3PT41xgQ/XtgOwlUjvDxNR1R8wmzSeLJwp9DzYaagpmXIm5At+rcE2xFnLrzbRsTUICpjc13x5OrFite6YV3ij2w/RPQ3uuBEONOBUOIXIKDeIIRuCm0UzUfUbjgg/KCd5W9XVPwWoLJW65PtG2VaYfNBayBdEjLL+sxNPtMG/B6o6dQ8sFwfwQYa0lK1oNyl4HcOhEqXDTsHqJGinWrCs2UKpgyU0QlFw8mZmKLesAE4s7MALhYGHy8y59hyWzJD6bNqZ435FH31s7t6fhAKOOc0cYdRdljioiWaM/mMZrcDD3vnNmcfWWAUh+vO+Tnkd3blCeTbIkRpUgj0g9Mo6Kdvnasx+75Pts+9UOHl33g88F/az4NySccZ/lnG+vLubb6V/yrUP0jxn3T3YN4zf31clNdw5VJ1bFyuIBirT41oZhQne7aZjkmET5mOYYj9MkLcf5pIjHJIvwJItJlkIU9HsvUFtlNtt+/9rbl2v8zvcBlYGjYdQD8s9WamiwYMCp+oV0wwNxA9DaDTgs94u9kigLu9//HX/BHf/wE0an7Q5/CAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a11ac2164713a21062c4995b116d4368"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>aea105eb-472a-4340-87fa-07844bdc2dec</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-13 20:03:41</sys_created_on>
+        <sys_id>a11ac2164713a21062c4995b116d4369</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-13 20:08:45</sys_updated_on>
+        <ui_id>8039ac19-d9aa-434f-97b2-c61a762c64e1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VYW2/iOhD+K1GeKSchQKBvR+0irXTOVtrt2ZeeynJiB7w1dmo7bSniv+84ToByL7Da7qPHc/lm5pvB4W7qM+Jf+qQf9LN+v9OLgyCKgqDbjVIcJknUTZMgwW2/4Qs8pqBpcMIpHJ8wL+z5BfW7cTdqobFMH5B+YBzRx4LlVocwnXM8+V6pfqrl6YhxoqjwL+/uG36OFbg2VPmX05UrM8kp4jihHMxvbWTvi4XROBj1G+P1LGyA+oiEcy0VsViChk9fDBWEQqgMc00b/hgLgo1Uk7lEUUxuBF8IRkwY8Ohb5RfNXsF9L7B6GYW0Uuru5kdU1ciJ05FkKb3JDZPCSRxQdyl5MRZfXAK2ujTDBTd1dUFSaPBHc4vZgqgQZd9G8vlrHXDARJledcllivn8hI1RLCkM1bYXlNMxOEJjnOdMDFGu5BMrjQHLuDnkcGhmXD5DUM2GoolTC7wJJcLNAcivS/F3rJjN4l9wA8YAiHHoNnJF17JQZVWeUMoLXV4oLLTz5c/KWqHHwqJ0WVf5IVciUNCpYrn5GwyeaJXKrFETu7OTIv0FJVIpCLMx9RK79UQjRv4vwJhMp1fQbUMJCptpoaCapgkl+UGNbA5tcQ1tOv3ZbJ38J3g6blyulvM5tBYbjTcVqBqcN7JqcMKzDU47CH7T6BhVfLzJ2TcLLuE9AxGSnSQgi35rqQxylVuaiHVmH83QAaOcvFnoB4CrjW8s2bxksg1vRdDMxljZ7K0/frN/SHoCIIJcvZngTJQ/rAD0PLzt7KRGEq7woGz/0h63MqzTdfZiz0jv9fgtW/a15u8BIGvDb4DIu3UoNwCv92vtvqJudDbqRq33UReIczedo59XbUOB6/eTbV2t/2r18ao+sGvJIJzdz6l/dVzM8L0xWzbmymxG7xrOZWa5m+stBDvz62zLsDV+5XSPwLSKh9ywomdGhtQsotdaRJpnzB823Vfsms9Qmd7JL71w58dAsvTSYxkaQ59YDs9PRVOggkZYUZTJQhBUPTwXtLF9y5jSplJe3yFfqSmU8CSMnGdG1Cu1vbn2OTbLAdnVhp8zr06vwqA9SM8r0/Pm6b2vGFv2UfuMb71T9tEAM16WHj4g8qXeUaWk2rKT9nRtR/sPXFgHggrPCur0jbaJ7xs32x6sf8TX6KlbJ6U4abdwN47CMAjCgMRBL47DXjfJujhuZ4tBQ0iLFNYieM6AGOAe1USouxqsrxa3G4/+ywR27l+DysWheGvjayns52orNp4FDH32asD7U6r2RSIlp1gs6Nn5bQvjo/yrUrDb1do40T+bmvarfswL9p9gjwX9bEnRo0GrF5L0oheH8UU7I92LPsGdC9xPOnFEaNrOjv99vv8J+VtanmQUAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a11ac2164713a21062c4995b116d4369"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>aea105eb-472a-4340-87fa-07844bdc2dec</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-13 20:03:41</sys_created_on>
+        <sys_id>a91ac2164713a21062c4995b116d4368</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-13 20:08:45</sys_updated_on>
+        <ui_id>6d6d0344-ffbb-4879-96b6-fa4ebcc6530c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UUW/aMBD+K5GfI5QQygpvkxjSHtZOXdWXrrKc+AJeHTuzHQqr+t93ThygXcdQhTRNGk/c5e6777v75NtHIjiZkhHwJJ2k4yJLs2yYJMPzUZqPszwd8owBpCQmilWAlQYKbTjGKyYbn8C/XNhass3NLlMsheQGFJne3sWkZgabHRgyfXzxyW1qoJLlILFxpoumAuWijzPEOJZY333VM3vJ1M/AmAd0KnwSP3k+aRITWDtQHHBcyaSFmFRMcea02ZCpMw0mDDB+qeRmW7EUynVKK7a24gfijxJfVwJKK8IWtiENG+qXo0UBl7UTWnUZx3LZb07LplIXnQS/WyhZI93ebhuLeFB7yp5Ex7D8stQPV/28uVCtusBW6oLJbcScMyJvHFh/DpDQLqVidS3UgtZGr0TbjFSqwUJiMCilfsCZVizUgBWe9wAXxAZzzM/a9A0zwov4hDDY/NSKp98bP7eTEQjTVnMrmLaHwlJbGFG79wi8gkDzKQ7OzM8OGaCY7O69h7lz55pOxu/G2ZBWurin9l5I6hhSY5Rrr/UbOP2rg6/bkojr6PO25G2WvvakoouO1LGCnjX/RmAw9bNc8PTZyTx9/pc8HRj9Y6b+k5WT4cG3bO/SrXvtno2tY66xX5skyfiHKvK39AJfse6Byjc6GCrEdxB1E+KjtfQAcwGS21fE9RYOA+gqDNg+zSfzcTpO2t//F/qEL/TdT2nUUPQ9CAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a91ac2164713a21062c4995b116d4368"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>aea105eb-472a-4340-87fa-07844bdc2dec</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-13 20:08:45</sys_created_on>
+        <sys_id>ef3bce564713a21062c4995b116d432c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-13 20:08:45</sys_updated_on>
+        <ui_id>e0e0ad2b-94a2-4b26-a0da-dae303431527</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1X3W7aSBR+lZGvwTEYDKRXSVG6kbZBSkn2oqnQeGYMsx17vPYYSqM8wr7ISn2KvNie8Q/GITgImqiVuEH4zJxzvnPO983Yn+8NTo1To0P7luN6Hdyz7LZtWf32YODaA8/q9wZWi1CjYQTYZ7AzYkRG+nmORaIN8JfyOBR4eVtayIwLGrHAOP38pWGEOAJnxSLj9P7JklqGbCKwywQ4DiVJfBYodDmEGLsCK7zHOJoyha4LgE8B61TwTPMkE66NsKRhWQ2DfVMsoAySeljErGH4OKBYyWi5skQM01EgSsOMBwpCnsWxJBwrFiM1Y4j5mAu04GqGMMrSm4aO9y3m3wGC3dahPAZNIBoRDwingMhYM0/ynsLyZblMZpITNgoVl0HWaIVdUfRcisQPrrKq9VSYhxOh1qaSxBCXhbpMjVtFCdTgfZrJxXWR94IHaUPyAoUkWKyesFIRdxOoMx2kYDgq401SSDomZGKCpT32cRjyYDoJIznnaWCA6ZtTAQ+mJ+QC/GM+DUxMdE0mNBybF2AfpuZbHHFd4EcIA84PaYMm/yQaU1ZiNbneO0nnDltjEvFQnUHgOctLeGjkfG8N6mhFOyV91mK+CufHOj66yuLviq3ivAVrTveKLWd76yC2j4HiKtNaRm6kchgrhvetKsO3MPunMzoHujelX4e2MNd4krExry1N/iKdXyKx5Tiu67jdnl0SZUA82nM9B/eIXRJjAWdT5OPo6yQ9m9aY3Nqkci7hPekMzicXaXmNnVEWznDSiYQy9FcBt66CnN+ulHAOBSW52weRO2MiUhLB7MQSDvBVZm0sj3c1wwrxGMUwLhONJeI5+DWPBlrKBPlJrGCbgpWKbCp3QudNFJOPNrcOn537byGpQ6XTrT9jcUk8PJsouSaY+/u+ZQ8waQ2adIBxs2N3vOag57abxGnhntMmToe1zOwtxEy58vCANlW2d5z9dPkJZhJMC03uUP5K0HKzF7n04iJmrjy7XnnZ68aG8NYuDet4bVSuDcoE93k63Eydh9Ke1s6dWZVRE/I6bzxVKu4AqXB8/34T3xYqdva7BI5cfDsutmq/7JhTmbX7NmTcAVPheP6EjW4dHbtHOv7qdOzWj55Uhh0n7t+MqDVKXo1uR+j85gM6G19fnt88/jscbbL0+U0/5UJ/Gf3KcYX9uXq2ENg5Xu2/0usrrh23166eTJIu15h6l1iWTUKkETYVD5Y+YZGUyoU2fE0X6Z1xl21jNz4K5FwiN5ki/W0jFD6BH73Ydjgm0KZ3ccx9jKYRhsZg2ORJjnDaw8o2Cp9UaC5JZmSER+SdmYE5CbNsm4rJwdaCefyxHcHjjyLt43+byfZT3h/jj38WutthEKsLIxvDxlxyxc2UL0q99Q68MJxu13aOilu/McIFbdNIhmFe20G3xpf/AZBRQqw5FwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ef3bce564713a21062c4995b116d432c"/>
     <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=4f4564ec4713625062c4995b116d4389"/>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4f4564ec4713625062c4995b116d4389^sys_idNOT IN875ea8e84753625062c4995b116d43af"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4f4564ec4713625062c4995b116d4389^sys_idNOT IN1a384e524713a21062c4995b116d43a9,a91ac2164713a21062c4995b116d4367"/>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
-        <block display_value="">4f5ea8e84753625062c4995b116d43ae</block>
+        <block display_value="">12384e524713a21062c4995b116d43a9</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -538,23 +466,50 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>2</order>
+        <order>1</order>
         <outputs_assigned/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-08 02:53:33</sys_created_on>
-        <sys_id>875ea8e84753625062c4995b116d43af</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_created_on>2025-08-13 19:55:33</sys_created_on>
+        <sys_id>1a384e524713a21062c4995b116d43a9</sys_id>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 03:11:59</sys_updated_on>
-        <ui_id>e8ebb52a-aeac-4d5e-9025-012fccb65c88</ui_id>
+        <sys_updated_on>2025-08-13 20:19:19</sys_updated_on>
+        <ui_id>58057443-8b71-4ef2-8446-e76f45ad101b</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1VTW/TQBD9K5XPjuWP2EpzK6BKSLQVbdULFGu8O05WrL1md50Povx3Zv2RRpAIBBw4cPO+2Zl5b3aevPNUa5vWmkd1ZYxY1N78w7Pvidph9L3zaqjQm3tM1VxYoeq8A3xvBbJ1gVcgNnBxg1wAoVyYRsL26WSQLYXkGoceDWiqZFF78913IbttMJdQoKQaD1aLekHpgtOpDKGMLlnEkjhL4jCMZ9OoyJIiinkCCAndGxNfj5Qv3nWIf1aL60e4GTspzR2tKPQ93FisOVLrEqRB36ug5mCV3h4QjcDvavkCLEVtqZznLm+M+Eq14zR1F0skjQz74OGYD1PrYbZUguFd4wj2iIVCDjlMybaqb3sdbt5YQivtOG9CWkP1sHGkHYuBUvmwVOv7seG1qDuBQ1AqBvJwAktjKFqLxj0MSqyoUF5B09Bw8karleiSiUsVLCQdglKqNTV1+xMAc8QDmhEE14S/6eAn0MKpuKEylNzTLMAIlne7RuWsJgn7biz5l9YR6gUOUvJ+GnTBMC0ae0V9Vjiw3vs/LurRju52SZZhBDGb8DTBybSYppPZDPkkjEuMkhgynsTBPTJ6+WChgSQCx/3+YxuGCe+2+NPt+z8sc8Yj/xa5v+HRS0jLNArT0x6dZqc8esKd540Z/8SYbpV+0ZdhGP435rExhcl7gw3auua/7ctnZ8K+g+n3hiMThog8Ouzt+J9xgS0tgGDH0Frpz07CC7b/Bu8AN52xBgAA</values>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lUJnQdAjMhrf0hQBCjQJ2gS5tImwIlc2UYpUScqPCv73LvWwjcZBg6K99SYOudyZ4Y66QLeuaZ291xfWioUK5l8ew0Aoj9F3FyioMZgHTCsunNCq6IEwWIFs/QZ9cmEbCduHA8KWQnKD420NGKpxaIJ598uW2zZYSChRUuGdM0ItqFxwWlUxVMk5S1iWzrI0jtO3Z0k5y8ok5RkgZHRuKrycyL352CPhi6x9P8Lt1Ekb7mklcRjgxqHiSK0rkBbDoAbFwWmz3SMGgd8qeQCWQrlBcQ0bK37Q3Wme+4MVkkY22rFfFqNVk0taMLxtPMEBcVDKyUIt21rdDDq8yVhBK92Rya2l+7DxpD2LkVJ1t9Trz1PDK6F6geOm1AzkfgWObChbh9Y/DEqs6aKihqYhc4rG6JXoi4lLHS0kLaJK6jU19ZMSAfPEI/IIoivC3/fwAxjhVVzTNVQ80CzBClb0U0XXOUMSdr0txffWExoEjlKKwQ06YJkRjbugPiscWe/C5yN5NI1dd0mP5JAXScRaQx64aGGAhADH3e5rG8cZfwdiA083n151+Bq5gOdD/u8a/Y3snENe5Umcn87O2exUdk6k5uXApL8JjH/iV+YljuP/gTkOjLDFMPijtr75H+fl0Ydj6GCHueHIhCUi9x77MP3p/caWBkCwY2itzTcv4YDtfgLm3DVGMwYAAA==</values>
         <workflow_reference/>
     </sys_hub_flow_logic_instance_v2>
-    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4f4564ec4713625062c4995b116d4389^sys_idNOT IN435ea8e84753625062c4995b116d43b8,8f5ea8e84753625062c4995b116d43b7,c75ea8e84753625062c4995b116d43b7"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e51ac2164713a21062c4995b116d4367</block>
+        <comment/>
+        <connected_to>58057443-8b71-4ef2-8446-e76f45ad101b</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Bugs (Equipe)">4f4564ec4713625062c4995b116d4389</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-13 20:03:41</sys_created_on>
+        <sys_id>a91ac2164713a21062c4995b116d4367</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-13 20:19:20</sys_updated_on>
+        <ui_id>aea105eb-472a-4340-87fa-07844bdc2dec</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4f4564ec4713625062c4995b116d4389^sys_idNOT IN435ea8e84753625062c4995b116d43b8,8f5ea8e84753625062c4995b116d43b7,96384e524713a21062c4995b116d43d4,c75ea8e84753625062c4995b116d43b7"/>
     <sys_hub_pill_compound action="INSERT_OR_UPDATE">
         <attached_to>4f4564ec4713625062c4995b116d4389</attached_to>
         <extra_info/>
@@ -588,6 +543,23 @@
         <transform_compositions>[]</transform_compositions>
         <transform_definition_id/>
         <ui_id>92b62559-fbc1-49af-9484-684f93a2f978</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>4f4564ec4713625062c4995b116d4389</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{c4b8177b-ffd9-4aa7-b303-94f164671e68.record.description}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-13 19:55:33</sys_created_on>
+        <sys_id>96384e524713a21062c4995b116d43d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-13 19:55:33</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0a1240b8-8f41-4989-8524-0952852074b1</ui_id>
     </sys_hub_pill_compound>
     <sys_hub_pill_compound action="INSERT_OR_UPDATE">
         <attached_to>4f4564ec4713625062c4995b116d4389</attached_to>

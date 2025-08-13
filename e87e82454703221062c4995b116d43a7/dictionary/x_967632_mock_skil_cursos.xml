@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="ca7a4ca2478fa61062c4995b116d4337" label="Cursos" max_length="40" name="x_967632_mock_skil_cursos" type="collection">
+        <element label="Ativo" max_length="40" name="ativo" type="boolean"/>
         <element label="Ordem" max_length="40" name="ordem" type="integer"/>
         <element label="URL" max_length="1024" name="url" type="url"/>
         <element display="true" label="Treinamento" max_length="255" name="treinamento" type="string"/>

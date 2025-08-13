@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="89e6cf1b470bea1062c4995b116d436c" extends="task" label="Projeto" max_length="40" name="x_967632_mock_skil_projeto" type="collection">
-        <element label="Gerente" max_length="40" name="gerente" type="string"/>
+        <element label="Gerente" max_length="40" name="gerente" reference="x_967632_mock_skil_equipe" type="reference"/>
         <element label="Estimado" max_length="20" name="estimado" type="currency"/>
         <element label="Data de Inicio" max_length="40" name="data_de_inicio" type="glide_date"/>
         <element label="Diferenca Orcamento" max_length="20" name="diferenca_orcamento" type="currency"/>

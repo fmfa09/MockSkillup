@@ -70,6 +70,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ativo</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-13 13:58:26</sys_created_on>
+            <sys_id>17763c1a475b621062c4995b116d4353</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_967632_mock_skil_cursos" sys_domain="global" view="Default view">7b3d5c2e47cfa61062c4995b116d43d8</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-13 13:58:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

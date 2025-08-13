@@ -30,7 +30,7 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) 
 {
  if (!gs.nil(current.data_de_desligamento)) {
-        current.ativo = false;}
+        current.active = false;}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -39,7 +39,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2cb8c862478fa61062c4995b116d4348</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Data Desligamento</sys_name>
         <sys_overrides/>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
@@ -47,7 +47,7 @@
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>sys_script_2cb8c862478fa61062c4995b116d4348</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-01 19:04:43</sys_updated_on>
+        <sys_updated_on>2025-08-13 13:43:36</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
