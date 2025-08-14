@@ -29,10 +29,29 @@
             <sys_created_on>2025-08-08 02:26:22</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-08-08 02:26:25</sys_updated_on>
-            <value>Alta</value>
+            <sys_updated_on>2025-08-14 13:07:17</sys_updated_on>
+            <value>alta</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>gravidade</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Altíssima</label>
+            <language>en</language>
+            <name>x_967632_mock_skil_bug</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-14 13:05:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-14 13:07:21</sys_updated_on>
+            <value>altissima</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -48,17 +67,17 @@
             <sys_created_on>2025-08-08 02:26:07</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-08-08 02:26:09</sys_updated_on>
-            <value>Baixa</value>
+            <sys_updated_on>2025-08-14 13:07:12</sys_updated_on>
+            <value>baixa</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>gravidade</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Media</label>
+            <label>Média</label>
             <language>en</language>
             <name>x_967632_mock_skil_bug</name>
             <sequence/>
@@ -67,10 +86,10 @@
             <sys_created_on>2025-08-08 02:26:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-08-08 02:26:18</sys_updated_on>
-            <value>Media</value>
+            <sys_updated_on>2025-08-14 13:07:08</sys_updated_on>
+            <value>media</value>
         </sys_choice>
     </sys_choice>
 </record_update>

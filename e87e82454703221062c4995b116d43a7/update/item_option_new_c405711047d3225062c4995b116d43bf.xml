@@ -22,7 +22,7 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field/>
+        <field>projeto</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -39,10 +39,10 @@
         <macro/>
         <macroponent/>
         <mandatory>false</mandatory>
-        <map_to_field>false</map_to_field>
+        <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>projeto_relacionado</name>
+        <name>projeto</name>
         <not_available_conversation>false</not_available_conversation>
         <order>300</order>
         <post_insert_script/>
@@ -79,14 +79,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-07 13:26:11</sys_created_on>
         <sys_id>c405711047d3225062c4995b116d43bf</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Qual projeto o problema está relacionado?</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>projeto</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>item_option_new_c405711047d3225062c4995b116d43bf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-07 13:50:44</sys_updated_on>
+        <sys_updated_on>2025-08-14 12:58:42</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

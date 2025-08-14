@@ -15,14 +15,14 @@
         <delivery_plan/>
         <description/>
         <display_title>false</display_title>
-        <do_not_select_first>false</do_not_select_first>
+        <do_not_select_first>true</do_not_select_first>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
         <dynamic_value_dot_walk_path/>
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field/>
+        <field>gravidade</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -33,13 +33,13 @@
         <list_table/>
         <lookup_label/>
         <lookup_price/>
-        <lookup_table/>
-        <lookup_unique>false</lookup_unique>
-        <lookup_value/>
+        <lookup_table>x_967632_mock_skil_bug</lookup_table>
+        <lookup_unique>true</lookup_unique>
+        <lookup_value>gravidade</lookup_value>
         <macro/>
         <macroponent/>
         <mandatory>false</mandatory>
-        <map_to_field>false</map_to_field>
+        <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>gravidade</name>
@@ -57,9 +57,10 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table>x_967632_mock_skil_bug</record_producer_table>
-        <reference/>
+        <reference>x_967632_mock_skil_bug</reference>
         <reference_qual>null</reference_qual>
-        <reference_qual_condition>null</reference_qual_condition>
+        <reference_qual_condition table="x_967632_mock_skil_bug">null<item endquery="false" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
         <rich_text/>
         <roles_to_use_also_request_for/>
         <save_script><![CDATA[/** This script is executed before the Record is generated
@@ -79,22 +80,22 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-07 14:32:16</sys_created_on>
         <sys_id>1e944e1c47d3225062c4995b116d4392</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Qual a gravidade do problema?</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>item_option_new_1e944e1c47d3225062c4995b116d4392</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-07 14:34:35</sys_updated_on>
+        <sys_updated_on>2025-08-14 13:13:43</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
-        <type>6</type>
+        <type>22</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
         <validate_regex/>
         <variable_name/>
         <variable_set/>

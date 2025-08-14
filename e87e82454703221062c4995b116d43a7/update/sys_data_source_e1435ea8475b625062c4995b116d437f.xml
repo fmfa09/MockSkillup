@@ -38,7 +38,7 @@
         <limit/>
         <maximum_rows/>
         <mid_server/>
-        <name>Importação de Bugs</name>
+        <name>Importacao de Bugs</name>
         <offset>0</offset>
         <oracle_port>1521</oracle_port>
         <oracle_sid>orcl</oracle_sid>
@@ -70,14 +70,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-08 10:17:53</sys_created_on>
         <sys_id>e1435ea8475b625062c4995b116d437f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Importação de Bugs</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Importacao de Bugs</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>sys_data_source_e1435ea8475b625062c4995b116d437f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-08 10:17:53</sys_updated_on>
+        <sys_updated_on>2025-08-14 13:53:30</sys_updated_on>
         <table_name/>
         <type>File</type>
         <use_batch_import>false</use_batch_import>
