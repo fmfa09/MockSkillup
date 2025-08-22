@@ -4,5 +4,6 @@
         <element label="Curso" max_length="40" name="curso" reference="x_967632_mock_skil_cursos" type="reference"/>
         <element label="Estagiário" max_length="40" name="estagiario" reference="x_967632_mock_skil_equipe" type="reference"/>
         <element label="Quantidade de Horas" max_length="40" name="quantidade_de_horas" type="glide_duration"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
     </element>
 </database>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-22 15:59:59</sys_created_on>
+        <sys_id>8768efcd4767661062c4995b116d43ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_967632_mock_skil.role_estagiario</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_security_acl display_value="x_967632_mock_skil_m2m_alocados.equipe">c5686b0147a7661062c4995b116d4317</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_8768efcd4767661062c4995b116d43ed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-22 15:59:59</sys_updated_on>
+        <sys_user_role display_value="x_967632_mock_skil.role_estagiario" name="x_967632_mock_skil.role_estagiario">19d6943747c36e1062c4995b116d4346</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="e89ab7af47036e1062c4995b116d4353" label="Bug" max_length="40" name="x_967632_mock_skil_bug" type="collection">
         <element label="Descrição" max_length="8000" name="descricao" type="html"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Bug" max_length="40" name="number" type="string"/>
         <element label="Projeto" max_length="32" name="projeto" reference="x_967632_mock_skil_projeto" type="reference"/>
         <element label="Solicitante" max_length="40" name="solicitante" type="string"/>
         <element label="Assigned to" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
