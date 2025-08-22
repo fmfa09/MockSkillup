@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Importar Cursos via REST</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="admin">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-08-01 19:55:06</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[(function() {
+  try {
+    // Executa o REST Message configurado
+    var rm = new sn_ws.RESTMessageV2('Leitura dados tabela Cursos' ,'ListaCursos');
+    var response = rm.execute();
+    var status = response.getStatusCode();
+    var body   = response.getBody();
+
+    if (status !== 200) {
+      gs.error('Leitura dados tabela Cursos: HTTP ' + status + ' — ' + body);
+      return;
+    }
+
+    var data    = JSON.parse(body).result;
+    var inserted = 0;
+	
+    for (var i = 0; i < data.length; i++) {
+      var curso = data[i];
+
+      // Evita duplicar pelo campo 'treinamento'
+      var gr = new GlideRecord('x_967632_mock_skil_cursos');
+      gr.addQuery('treinamento', curso.u_treinamento);
+      gr.query();
+      if (gr.next()) {
+        continue;
+      }
+
+      // Insere novo registro
+      gr.initialize();
+      gr.template     = curso.u_template;
+      gr.treinamento  = curso.u_treinamento;
+      gr.duracao      = curso.u_duracao;  // sem acento
+      gr.ordem        = curso.u_ordem;
+      gr.ativo        = curso.u_ativo;
+      gr.url          = curso.u_url;
+      gr.insert();
+      inserted++;
+      gs.info('Leitura dados tabela Cursos: inserido → ' + curso.treinamento);
+    }
+
+    gs.info('Leitura dados tabela Cursos: Concluído. ' + inserted + ' registro(s) inserido(s).');
+  }
+  catch (ex) {
+    gs.error('Leitura dados tabela Cursos: falha no REST — ' + ex.message);
+  }
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-01 19:58:30</sys_created_on>
+        <sys_id>760590a247cfa61062c4995b116d4361</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Importar Cursos via REST</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sysauto_script_760590a247cfa61062c4995b116d4361</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-01 21:41:52</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

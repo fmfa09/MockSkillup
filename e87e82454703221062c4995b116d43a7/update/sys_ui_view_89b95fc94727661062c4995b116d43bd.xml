@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>contact_mock</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-22 14:54:50</sys_created_on>
+        <sys_id>89b95fc94727661062c4995b116d43bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>contact mock</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sys_ui_view_89b95fc94727661062c4995b116d43bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-22 14:54:50</sys_updated_on>
+        <title>contact mock</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Tarefa do Projeto</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Tarefa do Projeto</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">7816a07b5d3122104f34969735a7adb7</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 12:23:24</sys_created_on>
+        <sys_id>410457eb474f2e1062c4995b116d438a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tarefa do Projeto</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sys_wizard_answer_410457eb474f2e1062c4995b116d438a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 12:23:24</sys_updated_on>
+        <table/>
+        <target_url>x_967632_mock_skil_tarefa_do_projeto.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

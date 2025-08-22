@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="80a91fc94727661062c4995b116d43d9" sys_domain="global" table="x_967632_mock_skil_contato" version="3" view="Tables">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-22 14:54:30</sys_created_on>
+            <sys_id>00a91fc94727661062c4995b116d43da</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_967632_mock_skil_contato" sys_domain="global" view="8369e87f5db122104f34969735a7ada1">80a91fc94727661062c4995b116d43d9</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-22 14:54:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>12M.x_967632_mock_skil_contato.core_company.contact</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-22 14:54:30</sys_created_on>
+            <sys_id>08a91fc94727661062c4995b116d43da</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_967632_mock_skil_contato" sys_domain="global" view="8369e87f5db122104f34969735a7ada1">80a91fc94727661062c4995b116d43d9</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-22 14:54:30</sys_updated_on>
+            <sys_user/>
+            <type>list</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_967632_mock_skil_contato</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-22 14:54:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>80a91fc94727661062c4995b116d43d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_967632_mock_skil_contato</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+            <sys_update_name>sys_ui_section_80a91fc94727661062c4995b116d43d9</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-22 14:54:30</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Tables" name="Tables">8369e87f5db122104f34969735a7ada1</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

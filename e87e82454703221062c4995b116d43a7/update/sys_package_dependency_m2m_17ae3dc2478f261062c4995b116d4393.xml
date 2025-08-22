@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Service Management Basics" source="com.snc.service">1dd82c3b5db122104f34969735a7ad7c</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 14:19:39</sys_created_on>
+        <sys_id>17ae3dc2478f261062c4995b116d4393</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 14:19:39</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-22 12:47:37</sys_created_on>
+        <sys_id>1d7cf64147a3661062c4995b116d433d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_967632_mock_skil.role_estagiario</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_security_acl display_value="">f76c36c147a3661062c4995b116d43a1</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1d7cf64147a3661062c4995b116d433d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-22 12:47:37</sys_updated_on>
+        <sys_user_role display_value="x_967632_mock_skil.role_estagiario" name="x_967632_mock_skil.role_estagiario">19d6943747c36e1062c4995b116d4346</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</application>
+        <file_path/>
+        <instance_id>4fa07d8bfbd06a101feef633beefdc0d</instance_id>
+        <instance_name>dev303432</instance_name>
+        <name>sys_security_acl_role_1d7cf64147a3661062c4995b116d433d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-22 12:47:37</sys_created_on><sys_id>1d7cf64147a3661062c4995b116d433d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.x_967632_mock_skil.role_estagiario</sys_name><sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope><sys_security_acl display_value="">f76c36c147a3661062c4995b116d43a1</sys_security_acl><sys_update_name>sys_security_acl_role_1d7cf64147a3661062c4995b116d433d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-22 12:47:37</sys_updated_on><sys_user_role display_value="x_967632_mock_skil.role_estagiario" name="x_967632_mock_skil.role_estagiario">19d6943747c36e1062c4995b116d4346</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1636225318</payload_hash>
+        <record_name>.x_967632_mock_skil.role_estagiario</record_name>
+        <reverted_from/>
+        <source>b71c519a471f621062c4995b116d4309</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-22 12:47:37</sys_created_on>
+        <sys_id>2d9c36c147a3661062c4995b116d43ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198d1d2003a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-22 12:47:37</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>219c36c1b2a36610ea4da5e074abd3ac</update_guid>
+        <update_guid_history>219c36c1b2a36610ea4da5e074abd3ac:-1636225318</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".x_967632_mock_skil.role_estagiario">638807c147e3661062c4995b116d43fb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-22 13:39:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>242eba20d3f745a0bc7c4c80b5be6400</sys_id>
+        <sys_metadata>1d7cf64147a3661062c4995b116d433d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_967632_mock_skil.role_estagiario</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_parent display_value="x_967632_mock_skil_tarefa_do_projeto.hora_trabalhada">f76c36c147a3661062c4995b116d43a1</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_scope_delete display_value="">096cc9fb91d943a8934a24cf7fb94464</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_1d7cf64147a3661062c4995b116d433d</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_1d7cf64147a3661062c4995b116d433d">2d9c36c147a3661062c4995b116d43ac</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-22 13:39:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
