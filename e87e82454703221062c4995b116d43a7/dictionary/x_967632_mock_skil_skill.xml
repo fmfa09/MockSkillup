@@ -7,7 +7,7 @@
                 <element inactive_on_update="false" label="Advanced" sequence="300" value="Advanced"/>
             </choice>
         </element>
-        <element label="Skill" max_length="255" name="skill" type="string"/>
+        <element display="true" label="Skill" max_length="255" name="skill" type="string"/>
         <element choice="1" label="Technical" max_length="40" name="technical" type="choice">
             <choice>
                 <element inactive_on_update="false" label="General" sequence="100" value="General"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="a6f2ff2747036e1062c4995b116d4380" label="M2M_Possui_Skill" max_length="40" name="x_967632_mock_skil_m2m_possui_skill" type="collection">
         <element label="Skill" max_length="40" name="skill" reference="x_967632_mock_skil_skill" type="reference"/>
-        <element choice="1" label="Nivel" max_length="40" name="nivel" type="choice">
+        <element choice="1" display="true" label="Nivel" max_length="40" name="nivel" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Basic" sequence="100" value="Basic"/>
                 <element inactive_on_update="false" label="Intermediate" sequence="200" value="Intermediate"/>
