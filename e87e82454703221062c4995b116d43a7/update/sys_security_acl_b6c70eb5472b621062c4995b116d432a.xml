@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
     <sys_security_acl action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
         <applies_to/>
         <condition/>
         <controlled_by_refs/>
         <decision_type>allow</decision_type>
-        <description>Allow create for all fields in x_967632_mock_skil_m2m_possui_skill, for users with role x_967632_mock_skil.role_estagiario.</description>
+        <description>Allow create for funcionario in x_967632_mock_skil_m2m_possui_skill, for users with role x_967632_mock_skil.role_estagiario.</description>
         <local_or_existing>Local</local_or_existing>
-        <name>x_967632_mock_skil_m2m_possui_skill.*</name>
+        <name>x_967632_mock_skil_m2m_possui_skill.funcionario</name>
         <operation display_value="create">create</operation>
         <script/>
         <security_attribute/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-23 11:58:57</sys_created_on>
-        <sys_id>8698371147a3e61062c4995b116d4372</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>x_967632_mock_skil_m2m_possui_skill.*</sys_name>
+        <sys_created_on>2025-08-24 16:52:53</sys_created_on>
+        <sys_id>b6c70eb5472b621062c4995b116d432a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_967632_mock_skil_m2m_possui_skill.funcionario</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_update_name>sys_security_acl_8698371147a3e61062c4995b116d4372</sys_update_name>
+        <sys_update_name>sys_security_acl_b6c70eb5472b621062c4995b116d432a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-25 13:24:44</sys_updated_on>
+        <sys_updated_on>2025-08-25 13:23:20</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

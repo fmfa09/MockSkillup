@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[
+function($scope, $http, spModal, spUtil, $sce) {
+  var c = this;
+  
+  // Variáveis de controle
+  c.loading = true;
+  c.saving = false;
+  c.editMode = false;
+  c.avisos = [];
+  c.currentAviso = {};
+  
+  // Verifica permissões do usuário
+  c.canManage = false;
+  
+  // Inicialização
+  c.$onInit = function() {
+    c.checkPermissions();
+    c.loadAvisos();
+  };
+  
+  // Verifica se o usuário pode gerenciar avisos
+  c.checkPermissions = function() {
+    c.server.get({
+      action: 'checkPermissions'
+    }).then(function(response) {
+      c.canManage = response.data.canManage;
+    });
+  };
+  
+  // Carrega a lista de avisos
+  c.loadAvisos = function() {
+    c.loading = true;
+    c.server.get({
+      action: 'getAvisos'
+    }).then(function(response) {
+      if (response.data && response.data.avisos) {
+        c.avisos = response.data.avisos.map(function(aviso) {
+          return c.processAviso(aviso);
+        });
+      }
+      c.loading = false;
+    }).catch(function(error) {
+      console.error('Erro ao carregar avisos:', error);
+      spUtil.addErrorMessage('Erro ao carregar avisos.');
+      c.loading = false;
+    });
+  };
+  
+  // Processa um aviso para exibição
+  c.processAviso = function(aviso) {
+    // Define classe CSS e texto para urgência
+    var urgenciaMap = {
+      '1': { class: 'success', display: 'Baixa' },
+      '2': { class: 'info', display: 'Média' },
+      '3': { class: 'warning', display: 'Alta' },
+      '4': { class: 'danger', display: 'Crítica' }
+    };
+    
+    var urgenciaInfo = urgenciaMap[aviso.urgencia] || { class: 'default', display: 'Não definida' };
+    
+    return {
+      sys_id: aviso.sys_id,
+      titulo: aviso.titulo,
+      urgencia: aviso.urgencia,
+      urgencia_class: urgenciaInfo.class,
+      urgencia_display: urgenciaInfo.display,
+      aviso: aviso.aviso,
+      aviso_html: $sce.trustAsHtml(aviso.aviso.replace(/\n/g, '<br>')),
+      sys_created_on_display: aviso.sys_created_on_display,
+      sys_created_by: aviso.sys_created_by
+    };
+  };
+  
+  // Abre modal para novo aviso
+  c.openModal = function() {
+    c.editMode = false;
+    c.currentAviso = {
+      titulo: '',
+      urgencia: '',
+      aviso: ''
+    };
+    $('#avisoModal').modal('show');
+  };
+  
+  // Edita um aviso existente
+  c.editAviso = function(aviso) {
+    c.editMode = true;
+    c.currentAviso = {
+      sys_id: aviso.sys_id,
+      titulo: aviso.titulo,
+      urgencia: aviso.urgencia,
+      aviso: aviso.aviso
+    };
+    $('#avisoModal').modal('show');
+  };
+  
+  // Salva o aviso (novo ou editado)
+  c.saveAviso = function() {
+    if (!c.currentAviso.titulo || !c.currentAviso.urgencia || !c.currentAviso.aviso) {
+      spUtil.addErrorMessage('Todos os campos são obrigatórios.');
+      return;
+    }
+    
+    c.saving = true;
+    
+    var action = c.editMode ? 'updateAviso' : 'createAviso';
+    
+    c.server.get({
+      action: action,
+      aviso: c.currentAviso
+    }).then(function(response) {
+      if (response.data && response.data.success) {
+        spUtil.addInfoMessage(c.editMode ? 'Aviso atualizado com sucesso.' : 'Aviso criado com sucesso.');
+        $('#avisoModal').modal('hide');
+        c.loadAvisos(); // Recarrega a lista
+      } else {
+        spUtil.addErrorMessage(response.data.message || 'Erro ao salvar aviso.');
+      }
+      c.saving = false;
+    }).catch(function(error) {
+      console.error('Erro ao salvar aviso:', error);
+      spUtil.addErrorMessage('Erro ao salvar aviso.');
+      c.saving = false;
+    });
+  };
+  
+  // Deleta um aviso
+  c.deleteAviso = function(aviso) {
+    var confirmMsg = 'Tem certeza que deseja deletar o aviso "' + aviso.titulo + '"?';
+    
+    if (confirm(confirmMsg)) {
+      c.server.get({
+        action: 'deleteAviso',
+        avisoId: aviso.sys_id
+      }).then(function(response) {
+        if (response.data && response.data.success) {
+          spUtil.addInfoMessage('Aviso deletado com sucesso.');
+          c.loadAvisos(); // Recarrega a lista
+        } else {
+          spUtil.addErrorMessage(response.data.message || 'Erro ao deletar aviso.');
+        }
+      }).catch(function(error) {
+        console.error('Erro ao deletar aviso:', error);
+        spUtil.addErrorMessage('Erro ao deletar aviso.');
+      });
+    }
+  };
+  
+  // Limpa o formulário quando o modal é fechado
+  $('#avisoModal').on('hidden.bs.modal', function() {
+    c.currentAviso = {};
+    c.saving = false;
+    $scope.$apply();
+  });
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>&lt;style&gt;
+.avisos-widget {
+  margin-bottom: 20px;
+}
+
+.aviso-item {
+  padding: 15px 0;
+}
+
+/* Cabeçalho: Título | Urgência */
+.aviso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.aviso-titulo-container {
+  flex: 1;
+}
+
+.aviso-titulo {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+}
+
+.aviso-titulo i {
+  margin-right: 8px;
+}
+
+.aviso-urgencia-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aviso-urgencia {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.aviso-actions {
+  display: flex;
+  gap: 5px;
+}
+
+/* Corpo do aviso */
+.aviso-corpo {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #ddd;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+/* Meta informações */
+.aviso-meta {
+  margin-top: 10px;
+}
+
+.text-success { color: #5cb85c !important; }
+.text-info { color: #5bc0de !important; }
+.text-warning { color: #f0ad4e !important; }
+.text-danger { color: #d9534f !important; }
+
+.label-success { background-color: #5cb85c; }
+.label-info { background-color: #5bc0de; }
+.label-warning { background-color: #f0ad4e; }
+.label-danger { background-color: #d9534f; }
+
+@media (max-width: 768px) {
+  .aviso-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .aviso-urgencia-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+&lt;/style&gt;</css>
+        <data_table>sp_instance_table</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>table,filter,field_list,maximum_entries,order_by,order_direction,title,color,glyph,sp_page</field_list>
+        <has_preview>false</has_preview>
+        <id>notice_mockskillup</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Notice MockSkillup</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  
+  var tableName = 'x_967632_mock_skil_aviso';
+  var roleGerente = 'x_967632_mock_skil.role_gerente';
+  var roleMonitor = 'x_967632_mock_skil.role_monitor';
+  
+  // Verifica se o usuário tem permissão para gerenciar avisos
+  function hasManagePermission() {
+    return gs.hasRole(roleGerente) || gs.hasRole(roleMonitor);
+  }
+  
+  // Formata data para exibição
+  function formatDateTime(gdt) {
+    if (!gdt) return '';
+    var date = new GlideDateTime(gdt);
+    return date.getDisplayValue();
+  }
+  
+  // Processa ações baseadas no input
+  if (input && input.action) {
+    
+    switch (input.action) {
+      
+      case 'checkPermissions':
+        data.canManage = hasManagePermission();
+        break;
+        
+      case 'getAvisos':
+        try {
+          var avisos = [];
+          var gr = new GlideRecord(tableName);
+          gr.orderByDesc('sys_created_on');
+          gr.query();
+          
+          while (gr.next()) {
+            var aviso = {
+              sys_id: gr.getUniqueValue(),
+              titulo: gr.getValue('aviso') || '',
+              urgencia: gr.getValue('urgencia') || '1',
+              aviso: gr.getValue('descricao') || '',
+              sys_created_on_display: formatDateTime(gr.sys_created_on),
+              sys_created_by: gr.sys_created_by.getDisplayValue()
+            };
+            avisos.push(aviso);
+          }
+          
+          data.avisos = avisos;
+          data.success = true;
+          
+        } catch (e) {
+          gs.error('Erro ao buscar avisos: ' + e.message);
+          data.success = false;
+          data.message = 'Erro interno ao carregar avisos.';
+        }
+        break;
+        
+      case 'createAviso':
+        if (!hasManagePermission()) {
+          data.success = false;
+          data.message = 'Você não tem permissão para criar avisos.';
+          break;
+        }
+        
+        try {
+          var novoAviso = input.aviso;
+          
+          // Validação básica
+          if (!novoAviso.titulo || !novoAviso.urgencia || !novoAviso.aviso) {
+            data.success = false;
+            data.message = 'Todos os campos são obrigatórios.';
+            break;
+          }
+          
+          var gr = new GlideRecord(tableName);
+          gr.initialize();
+          gr.setValue('aviso', novoAviso.titulo);
+          gr.setValue('urgencia', novoAviso.urgencia);
+          gr.setValue('descricao', novoAviso.aviso);
+          
+          var sysId = gr.insert();
+          
+          if (sysId) {
+            data.success = true;
+            data.avisoId = sysId;
+            gs.info('Aviso criado com sucesso: ' + sysId);
+          } else {
+            data.success = false;
+            data.message = 'Erro ao criar aviso.';
+          }
+          
+        } catch (e) {
+          gs.error('Erro ao criar aviso: ' + e.message);
+          data.success = false;
+          data.message = 'Erro interno ao criar aviso.';
+        }
+        break;
+        
+      case 'updateAviso':
+        if (!hasManagePermission()) {
+          data.success = false;
+          data.message = 'Você não tem permissão para editar avisos.';
+          break;
+        }
+        
+        try {
+          var avisoAtualizado = input.aviso;
+          
+          // Validação básica
+          if (!avisoAtualizado.sys_id || !avisoAtualizado.titulo || !avisoAtualizado.urgencia || !avisoAtualizado.aviso) {
+            data.success = false;
+            data.message = 'Dados inválidos para atualização.';
+            break;
+          }
+          
+          var gr = new GlideRecord(tableName);
+          if (gr.get(avisoAtualizado.sys_id)) {
+            gr.setValue('aviso', avisoAtualizado.titulo);
+            gr.setValue('urgencia', avisoAtualizado.urgencia);
+            gr.setValue('descricao', avisoAtualizado.aviso);
+            
+            if (gr.update()) {
+              data.success = true;
+              gs.info('Aviso atualizado com sucesso: ' + avisoAtualizado.sys_id);
+            } else {
+              data.success = false;
+              data.message = 'Erro ao atualizar aviso.';
+            }
+          } else {
+            data.success = false;
+            data.message = 'Aviso não encontrado.';
+          }
+          
+        } catch (e) {
+          gs.error('Erro ao atualizar aviso: ' + e.message);
+          data.success = false;
+          data.message = 'Erro interno ao atualizar aviso.';
+        }
+        break;
+        
+      case 'deleteAviso':
+        if (!hasManagePermission()) {
+          data.success = false;
+          data.message = 'Você não tem permissão para deletar avisos.';
+          break;
+        }
+        
+        try {
+          var avisoId = input.avisoId;
+          
+          if (!avisoId) {
+            data.success = false;
+            data.message = 'ID do aviso não fornecido.';
+            break;
+          }
+          
+          var gr = new GlideRecord(tableName);
+          if (gr.get(avisoId)) {
+            if (gr.deleteRecord()) {
+              data.success = true;
+              gs.info('Aviso deletado com sucesso: ' + avisoId);
+            } else {
+              data.success = false;
+              data.message = 'Erro ao deletar aviso.';
+            }
+          } else {
+            data.success = false;
+            data.message = 'Aviso não encontrado.';
+          }
+          
+        } catch (e) {
+          gs.error('Erro ao deletar aviso: ' + e.message);
+          data.success = false;
+          data.message = 'Erro interno ao deletar aviso.';
+        }
+        break;
+        
+      default:
+        data.success = false;
+        data.message = 'Ação não reconhecida.';
+        break;
+    }
+  } else {
+    // Inicialização padrão - carrega avisos
+    data.canManage = hasManagePermission();
+    
+    try {
+      var avisos = [];
+      var gr = new GlideRecord(tableName);
+      gr.orderByDesc('sys_created_on');
+      gr.query();
+      
+      while (gr.next()) {
+        var aviso = {
+          sys_id: gr.getUniqueValue(),
+          titulo: gr.getValue('aviso') || '',
+          urgencia: gr.getValue('urgencia') || '1',
+          aviso: gr.getValue('descricao') || '',
+          sys_created_on_display: formatDateTime(gr.sys_created_on),
+          sys_created_by: gr.sys_created_by.getDisplayValue()
+        };
+        avisos.push(aviso);
+      }
+      
+      data.avisos = avisos;
+      
+    } catch (e) {
+      gs.error('Erro na inicialização: ' + e.message);
+      data.avisos = [];
+    }
+  }
+  
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 20:45:37</sys_created_on>
+        <sys_id>3cc6445247e7e21062c4995b116d4336</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Notice MockSkillup</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sp_widget_3cc6445247e7e21062c4995b116d4336</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 01:38:09</sys_updated_on>
+        <template><![CDATA[<!-- HTML Template -->
+<div class="avisos-widget">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <i class="fa fa-bullhorn"></i> Avisos
+        <div class="pull-right" ng-if="c.canManage">
+          <button class="btn btn-sm btn-success" ng-click="c.openModal()" title="Novo Aviso">
+            <i class="fa fa-plus"></i> Novo
+          </button>
+        </div>
+      </h3>
+    </div>
+    
+    <div class="panel-body">
+      <!-- Loading -->
+      <div ng-if="c.loading" class="text-center">
+        <i class="fa fa-spinner fa-spin fa-2x"></i>
+        <p>Carregando avisos...</p>
+      </div>
+      
+      <!-- Lista de Avisos -->
+      <div ng-if="!c.loading">
+        <div ng-if="c.avisos.length === 0" class="alert alert-info">
+          <i class="fa fa-info-circle"></i> Nenhum aviso encontrado.
+        </div>
+        
+        <div ng-repeat="aviso in c.avisos" class="aviso-item">
+          <!-- Linha: Título | Urgência -->
+          <div class="aviso-header">
+            <div class="aviso-titulo-container">
+              <h4 class="aviso-titulo">
+                <i class="fa fa-circle text-{{aviso.urgencia_class}}"></i>
+                {{aviso.titulo}}
+              </h4>
+            </div>
+            <div class="aviso-urgencia-container">
+              <span class="label label-{{aviso.urgencia_class}} aviso-urgencia">
+                {{aviso.urgencia_display}}
+              </span>
+              <div class="aviso-actions" ng-if="c.canManage">
+                <button class="btn btn-xs btn-primary" ng-click="c.editAviso(aviso)" title="Editar">
+                  <i class="fa fa-edit"></i>
+                </button>
+                <button class="btn btn-xs btn-danger" ng-click="c.deleteAviso(aviso)" title="Deletar">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Corpo do Aviso -->
+          <div class="aviso-corpo" ng-bind-html="aviso.aviso_html"></div>
+          
+          <!-- Data/Autor -->
+          <div class="aviso-meta">
+            <small class="text-muted">
+              <i class="fa fa-clock-o"></i> {{aviso.sys_created_on_display}}
+              <span ng-if="aviso.sys_created_by"> - {{aviso.sys_created_by}}</span>
+            </small>
+          </div>
+          
+          <hr ng-if="!$last">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para Criar/Editar Aviso -->
+<div class="modal fade" id="avisoModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+        <h4 class="modal-title">
+          {{c.editMode ? 'Editar' : 'Novo'}} Aviso
+        </h4>
+      </div>
+      
+      <form ng-submit="c.saveAviso()">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título *</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="titulo"
+                   ng-model="c.currentAviso.titulo" 
+                   required
+                   maxlength="255">
+          </div>
+          
+          <div class="form-group">
+            <label for="urgencia">Urgência *</label>
+            <select class="form-control" 
+                    id="urgencia"
+                    ng-model="c.currentAviso.urgencia" 
+                    required>
+              <option value="">Selecione...</option>
+              <option value="1">Baixa</option>
+              <option value="2">Média</option>
+              <option value="3">Alta</option>
+              <option value="4">Crítica</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="aviso">Corpo do Aviso *</label>
+            <textarea class="form-control" 
+                      id="aviso"
+                      ng-model="c.currentAviso.aviso" 
+                      rows="8" 
+                      required
+                      placeholder="Digite o conteúdo do aviso..."></textarea>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary" ng-disabled="c.saving">
+            <i class="fa fa-save"></i>
+            {{c.saving ? 'Salvando...' : 'Salvar'}}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

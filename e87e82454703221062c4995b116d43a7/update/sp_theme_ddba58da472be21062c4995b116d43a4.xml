@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables>&lt;img src="logo.png" width="94" height="57"/&gt;</css_variables>
+        <footer display_value="Mock">283f05de472fe21062c4995b116d436e</footer>
+        <footer_fixed>true</footer_fixed>
+        <header display_value="MockSkillup">511343f1476f621062c4995b116d4366</header>
+        <name>Mock_edx</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 22:13:14</sys_created_on>
+        <sys_id>ddba58da472be21062c4995b116d43a4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Mock_edx</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sp_theme_ddba58da472be21062c4995b116d43a4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 02:06:34</sys_updated_on>
+        <turn_off_scss_compilation>false</turn_off_scss_compilation>
+    </sp_theme>
+</record_update>

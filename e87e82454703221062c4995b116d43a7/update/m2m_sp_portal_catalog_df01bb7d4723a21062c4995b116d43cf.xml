@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_catalog">
+    <m2m_sp_portal_catalog action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <order>100</order>
+        <sc_catalog display_value="Mock Skillup">f36f30c4479bae1062c4995b116d435c</sc_catalog>
+        <sp_portal display_value="Mock SkillUP">15b6e36e47dbe21062c4995b116d430f</sp_portal>
+        <sys_class_name>m2m_sp_portal_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 00:32:17</sys_created_on>
+        <sys_id>df01bb7d4723a21062c4995b116d43cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mock Skillup.Mock SkillUP</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>m2m_sp_portal_catalog_df01bb7d4723a21062c4995b116d43cf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 00:32:17</sys_updated_on>
+    </m2m_sp_portal_catalog>
+</record_update>

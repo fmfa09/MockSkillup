@@ -9,12 +9,12 @@
         <enable_certificate_based_authentication>false</enable_certificate_based_authentication>
         <enable_favorites>false</enable_favorites>
         <hide_portal_name>false</hide_portal_name>
-        <homepage display_value="mockskillup">f9e62b6e47dbe21062c4995b116d4311</homepage>
+        <homepage display_value="mock_page_home">faed8ec2476fa21062c4995b116d43e0</homepage>
         <icon/>
         <inactive>false</inactive>
         <kb_knowledge_base/>
-        <kb_knowledge_page/>
-        <login_page/>
+        <kb_knowledge_page display_value="kb_home">e1c919e4dbd3220099f93691f0b8f535</kb_knowledge_page>
+        <login_page display_value="landing">36c61807cb31120000f8d856634c9ca9</login_page>
         <logo/>
         <notfound_page/>
         <quick_start_config/>
@@ -25,20 +25,20 @@
         <search_application/>
         <search_results_configuration/>
         <sp_chat_queue/>
-        <sp_rectangle_menu/>
+        <sp_rectangle_menu display_value="SP Header Menu">d150fd31cb10020000f8d856634c9ce6</sp_rectangle_menu>
         <sys_class_name>sp_portal</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-14 21:27:22</sys_created_on>
         <sys_id>15b6e36e47dbe21062c4995b116d430f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Mock SkillUP</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>sp_portal_15b6e36e47dbe21062c4995b116d430f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-14 21:30:43</sys_updated_on>
-        <theme/>
+        <sys_updated_on>2025-08-25 22:14:55</sys_updated_on>
+        <theme display_value="Mock_edx">ddba58da472be21062c4995b116d43a4</theme>
         <title>Mock SkillUP</title>
         <ts_index_group/>
         <url_suffix>mock_skillup</url_suffix>

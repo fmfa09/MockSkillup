@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description>If true, portal css would be in rem units</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.service_portal.resize_text.mockskillup.enable_rem_conversion</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-24 21:35:26</sys_created_on>
+        <sys_id>f09887b9476f621062c4995b116d4387</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.service_portal.resize_text.mockskillup.enable_rem_conversion</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sys_properties_f09887b9476f621062c4995b116d4387</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-24 21:35:26</sys_updated_on>
+        <type>boolean</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=f09887b9476f621062c4995b116d4387"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</application>
+        <file_path/>
+        <instance_id>4fa07d8bfbd06a101feef633beefdc0d</instance_id>
+        <instance_name>dev303432</instance_name>
+        <name>sys_properties_f09887b9476f621062c4995b116d4387</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>If true, portal css would be in rem units</description><ignore_cache>true</ignore_cache><is_private>false</is_private><name>glide.service_portal.resize_text.mockskillup.enable_rem_conversion</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-24 21:35:26</sys_created_on><sys_id>f09887b9476f621062c4995b116d4387</sys_id><sys_mod_count>0</sys_mod_count><sys_name>glide.service_portal.resize_text.mockskillup.enable_rem_conversion</sys_name><sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope><sys_update_name>sys_properties_f09887b9476f621062c4995b116d4387</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-24 21:35:26</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=f09887b9476f621062c4995b116d4387"/></record_update>]]></payload>
+        <payload_hash>-397007802</payload_hash>
+        <record_name>glide.service_portal.resize_text.mockskillup.enable_rem_conversion</record_name>
+        <reverted_from/>
+        <source>1d96236e47dbe21062c4995b116d4310</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-24 21:35:26</sys_created_on>
+        <sys_id>f89887b9476f621062c4995b116d438a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198de01f5080000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-24 21:35:26</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>bc9887b9f16f621063b97b43d966c189</update_guid>
+        <update_guid_history>bc9887b9f16f621063b97b43d966c189:-397007802</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 17:43:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>2b7ca11972de4cef9062a35bbf6a7fb1</sys_id>
+        <sys_metadata>f09887b9476f621062c4995b116d4387</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.service_portal.resize_text.mockskillup.enable_rem_conversion</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_scope_delete display_value="">096cc9fb91d943a8934a24cf7fb94464</sys_scope_delete>
+        <sys_update_name>sys_properties_f09887b9476f621062c4995b116d4387</sys_update_name>
+        <sys_update_version display_value="sys_properties_f09887b9476f621062c4995b116d4387">f89887b9476f621062c4995b116d438a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 17:43:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_catalog">
+    <m2m_sp_portal_catalog action="DELETE">
+        <active>true</active>
+        <order>100</order>
+        <sc_catalog display_value="Mock Skillup">f36f30c4479bae1062c4995b116d435c</sc_catalog>
+        <sp_portal display_value="Mock Skillup">6178c3b9476f621062c4995b116d43e1</sp_portal>
+        <sys_class_name>m2m_sp_portal_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 00:33:07</sys_created_on>
+        <sys_id>6731773d4723a21062c4995b116d4322</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mock Skillup.Mock Skillup</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>m2m_sp_portal_catalog_6731773d4723a21062c4995b116d4322</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 00:33:07</sys_updated_on>
+    </m2m_sp_portal_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</application>
+        <file_path/>
+        <instance_id>4fa07d8bfbd06a101feef633beefdc0d</instance_id>
+        <instance_name>dev303432</instance_name>
+        <name>m2m_sp_portal_catalog_6731773d4723a21062c4995b116d4322</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_catalog"><m2m_sp_portal_catalog action="INSERT_OR_UPDATE"><active>true</active><order>100</order><sc_catalog display_value="Mock Skillup">f36f30c4479bae1062c4995b116d435c</sc_catalog><sp_portal display_value="Mock Skillup">6178c3b9476f621062c4995b116d43e1</sp_portal><sys_class_name>m2m_sp_portal_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-25 00:33:07</sys_created_on><sys_id>6731773d4723a21062c4995b116d4322</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Mock Skillup.Mock Skillup</sys_name><sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope><sys_update_name>m2m_sp_portal_catalog_6731773d4723a21062c4995b116d4322</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-25 00:33:07</sys_updated_on></m2m_sp_portal_catalog></record_update>]]></payload>
+        <payload_hash>602693999</payload_hash>
+        <record_name>Mock Skillup.Mock Skillup</record_name>
+        <reverted_from/>
+        <source>1d96236e47dbe21062c4995b116d4310</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 00:33:07</sys_created_on>
+        <sys_id>af31ff7d4723a21062c4995b116d4309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198dea49efa0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 00:33:07</sys_updated_on>
+        <type>Portal Catalog</type>
+        <update_guid>ef31773d4723a210addb6a6decdb6e23</update_guid>
+        <update_guid_history>ef31773d4723a210addb6a6decdb6e23:602693999</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Mock Skillup.Mock Skillup">a71d930e47e3e21062c4995b116d438b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 17:43:40</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_portal_catalog">m2m_sp_portal_catalog</sys_db_object>
+        <sys_id>6515712cd6cb412a9d7962961a1b3704</sys_id>
+        <sys_metadata>6731773d4723a21062c4995b116d4322</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mock Skillup.Mock Skillup</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_scope_delete display_value="">096cc9fb91d943a8934a24cf7fb94464</sys_scope_delete>
+        <sys_update_name>m2m_sp_portal_catalog_6731773d4723a21062c4995b116d4322</sys_update_name>
+        <sys_update_version display_value="m2m_sp_portal_catalog_6731773d4723a21062c4995b116d4322">af31ff7d4723a21062c4995b116d4309</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 17:43:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+  $scope.form = {
+    sys_id: '',
+    titulo: '',
+    urgencia: '',
+    aviso: ''
+  };
+
+  $scope.submitForm = function() {
+    var action = $scope.form.sys_id ? 'update' : 'create';
+    $scope.server.update({
+      action: action,
+      sys_id: $scope.form.sys_id,
+      titulo: $scope.form.titulo,
+      urgencia: $scope.form.urgencia,
+      aviso: $scope.form.aviso
+    });
+    $scope.form = { sys_id: '', titulo: '', urgencia: '', aviso: '' };
+  };
+
+  $scope.editAviso = function(aviso) {
+    $scope.form = angular.copy(aviso);
+  };
+
+  $scope.deleteAviso = function(sys_id) {
+    $scope.server.update({ action: 'delete', sys_id: sys_id });
+  };
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.card {
+  border-radius: 10px;
+}
+.badge {
+  font-size: 0.9rem;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Aviso</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  // Ação recebida do Client Script
+  if (input && input.action) {
+    var gr = new GlideRecord('x_967632_mock_skil_aviso');
+
+    if (input.action === 'create') {
+      gr.initialize();
+      gr.setValue('descricao', input.titulo);
+      gr.setValue('urgencia', input.urgencia);
+      gr.setValue('aviso', input.aviso);
+      gr.insert();
+    }
+
+    if (input.action === 'update' && input.sys_id) {
+      if (gr.get(input.sys_id)) {
+        gr.setValue('descricao', input.titulo);
+        gr.setValue('urgencia', input.urgencia);
+        gr.setValue('aviso', input.aviso);
+        gr.update();
+      }
+    }
+
+    if (input.action === 'delete' && input.sys_id) {
+      if (gr.get(input.sys_id)) {
+        gr.deleteRecord();
+      }
+    }
+  }
+
+  // Carrega os avisos
+  var avisos = [];
+  var grAviso = new GlideRecord('x_967632_mock_skil_aviso');
+  grAviso.query();
+  while (grAviso.next()) {
+    avisos.push({
+      sys_id: grAviso.getValue('sys_id'),
+      titulo: grAviso.getValue('descricao'),
+      urgencia: grAviso.getValue('urgencia'),
+      aviso: grAviso.getValue('aviso')
+    });
+  }
+
+  // Verifica permissão
+  data.canEdit = gs.hasRole('x_967632_mock_skil.role_gerente') || gs.hasRole('x_967632_mock_skil.role_monitor');
+  data.avisos = avisos;
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-25 14:24:35</sys_created_on>
+        <sys_id>937faa8247efa21062c4995b116d43fc</sys_id>
+        <sys_mod_count>43</sys_mod_count>
+        <sys_name>Aviso</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sp_widget_937faa8247efa21062c4995b116d43fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-25 20:53:56</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div class="row" ng-repeat="aviso in data.avisos">
+    <div class="col-md-6"><strong>{{ aviso.titulo }}</strong></div>
+    <div class="col-md-6"><span class="label label-info">{{ aviso.urgencia }}</span></div>
+    <div class="col-md-12"><p>{{ aviso.aviso }}</p></div>
+
+    <div class="col-md-12" ng-if="data.canEdit">
+      <button class="btn btn-primary btn-sm" ng-click="editAviso(aviso)">Editar</button>
+      <button class="btn btn-danger btn-sm" ng-click="deleteAviso(aviso.sys_id)">Deletar</button>
+    </div>
+    <hr>
+  </div>
+
+  <div ng-if="data.canEdit">
+    <h4>{{ form.sys_id ? 'Editar Aviso' : 'Novo Aviso' }}</h4>
+    <form ng-submit="submitForm()">
+      <input type="text" ng-model="form.titulo" placeholder="Título" class="form-control" required>
+      <input type="text" ng-model="form.urgencia" placeholder="Urgência" class="form-control" required>
+      <textarea ng-model="form.aviso" placeholder="Corpo do aviso" class="form-control" required></textarea>
+      <button type="submit" class="btn btn-success">{{ form.sys_id ? 'Atualizar' : 'Criar' }}</button>
+    </form>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>
