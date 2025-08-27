@@ -4,35 +4,35 @@
         <class_name/>
         <color>default</color>
         <css/>
-        <glyph>bug</glyph>
+        <glyph>info-circle</glyph>
         <id/>
         <kb_article/>
         <kb_category/>
         <kb_topic/>
         <order>1</order>
         <roles/>
-        <sc_cat_item display_value="Reportar Bug">69a3bddc4753225062c4995b116d43b1</sc_cat_item>
+        <sc_cat_item/>
         <sc_category/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="1">1dba112a47a3661062c4995b116d4366</sp_column>
-        <sp_page display_value="sc_cat_item">9f12251147132100ba13a5554ee490f4</sp_page>
+        <sp_column display_value="1">bb7401364767a61062c4995b116d431a</sp_column>
+        <sp_page display_value="knowledge_mock_skill_cliente">301aa1f6472ba61062c4995b116d43b1</sp_page>
         <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
         <sys_class_name>sp_instance_link</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-26 21:32:45</sys_created_on>
-        <sys_id>3c2bdd2a47a3661062c4995b116d431a</sys_id>
+        <sys_created_on>2025-08-27 16:44:20</sys_created_on>
+        <sys_id>86b2693e47e7a61062c4995b116d43c9</sys_id>
         <sys_mod_count>5</sys_mod_count>
-        <sys_name>Reportar Bug</sys_name>
+        <sys_name>Knowledge</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_update_name>sp_instance_link_3c2bdd2a47a3661062c4995b116d431a</sys_update_name>
+        <sys_update_name>sp_instance_link_86b2693e47e7a61062c4995b116d43c9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-27 17:03:56</sys_updated_on>
-        <title>Reportar Bug</title>
-        <type>sc_cat_item</type>
-        <url>https://dev303432.service-now.com/mock_skillup?id=sc_cat_item&amp;sys_id=69a3bddc4753225062c4995b116d43b1</url>
+        <sys_updated_on>2025-08-27 17:26:10</sys_updated_on>
+        <title>Knowledge</title>
+        <type>url</type>
+        <url>https://dev303432.service-now.com/mock_skillup_cliente?id=kb_search&amp;kb_knowledge_base=888881ee4723661062c4995b116d4398</url>
         <widget_parameters><![CDATA[{
 	"link_template": {
 		"value": "Top Icon",
@@ -40,5 +40,5 @@
 	}
 }]]></widget_parameters>
     </sp_instance_link>
-    <sys_translated_text action="delete_multiple" query="documentkey=3c2bdd2a47a3661062c4995b116d431a"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=86b2693e47e7a61062c4995b116d43c9"/>
 </record_update>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">b01ae9f6472ba61062c4995b116d4397</sp_column>
+        <sp_widget display_value="KB Most Viewed">7d903b52cb30020000f8d856634c9ce3</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-27 17:16:29</sys_created_on>
+        <sys_id>701ae9f6472ba61062c4995b116d439c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Most Viewed Articles</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sp_instance_701ae9f6472ba61062c4995b116d439c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-27 17:16:29</sys_updated_on>
+        <title>Most Viewed Articles</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=701ae9f6472ba61062c4995b116d439c"/>
+</record_update>

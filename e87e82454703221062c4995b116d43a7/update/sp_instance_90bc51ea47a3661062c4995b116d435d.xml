@@ -4,10 +4,10 @@
         <class_name/>
         <color>default</color>
         <css/>
-        <glyph>bug</glyph>
-        <id/>
-        <order>1</order>
-        <roles>admin</roles>
+        <glyph>university</glyph>
+        <id>Card - Envio de Certificados</id>
+        <order>100</order>
+        <roles/>
         <short_description/>
         <size>sm</size>
         <sp_column/>
@@ -16,14 +16,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-26 21:42:08</sys_created_on>
         <sys_id>90bc51ea47a3661062c4995b116d435d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Card - Envio de Certificados</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>sp_instance_90bc51ea47a3661062c4995b116d435d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-26 22:26:02</sys_updated_on>
+        <sys_updated_on>2025-08-27 11:59:40</sys_updated_on>
         <title>Card - Envio de Certificados</title>
         <url>https://dev303432.service-now.com/mock_skillup?id=sc_cat_item&amp;sys_id=53edce9c4717225062c4995b116d430d</url>
         <widget_parameters/>

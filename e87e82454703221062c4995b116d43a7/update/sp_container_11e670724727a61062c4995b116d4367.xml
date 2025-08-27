@@ -6,24 +6,24 @@
         <bootstrap_alt>false</bootstrap_alt>
         <class_name/>
         <container_class_name/>
-        <name>Homepage - Container 2</name>
-        <order>2</order>
+        <name>Homepage - Container 1</name>
+        <order>1</order>
         <semantic_tag/>
         <sp_page display_value="homepage">915a9de647a3661062c4995b116d4326</sp_page>
-        <subheader>false</subheader>
+        <subheader>true</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-26 21:29:52</sys_created_on>
-        <sys_id>fe7a512247a3661062c4995b116d43dd</sys_id>
-        <sys_mod_count>13</sys_mod_count>
-        <sys_name>Homepage - Container 2</sys_name>
+        <sys_created_on>2025-08-27 13:32:52</sys_created_on>
+        <sys_id>11e670724727a61062c4995b116d4367</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Homepage - Container 1</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_update_name>sp_container_fe7a512247a3661062c4995b116d43dd</sys_update_name>
+        <sys_update_name>sp_container_11e670724727a61062c4995b116d4367</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-27 13:34:46</sys_updated_on>
+        <sys_updated_on>2025-08-27 14:33:17</sys_updated_on>
         <title/>
-        <width>container</width>
+        <width>container-fluid</width>
     </sp_container>
 </record_update>

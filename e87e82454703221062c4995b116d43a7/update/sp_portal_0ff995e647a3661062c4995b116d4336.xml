@@ -13,15 +13,15 @@
         <icon/>
         <inactive>false</inactive>
         <kb_knowledge_base/>
-        <kb_knowledge_page/>
-        <login_page/>
+        <kb_knowledge_page display_value="homepage">915a9de647a3661062c4995b116d4326</kb_knowledge_page>
+        <login_page display_value="homepage">915a9de647a3661062c4995b116d4326</login_page>
         <logo/>
-        <notfound_page/>
+        <notfound_page display_value="404">3c2c9063cb11020000f8d856634c9c1f</notfound_page>
         <quick_start_config/>
         <rtl_enabled>false</rtl_enabled>
         <sc_catalog/>
-        <sc_catalog_page/>
-        <sc_category_page/>
+        <sc_catalog_page display_value="homepage">915a9de647a3661062c4995b116d4326</sc_catalog_page>
+        <sc_category_page display_value="homepage">915a9de647a3661062c4995b116d4326</sc_category_page>
         <search_application/>
         <search_results_configuration/>
         <sp_chat_queue/>
@@ -30,15 +30,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-26 21:39:21</sys_created_on>
         <sys_id>0ff995e647a3661062c4995b116d4336</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Mock SkillUP</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>sp_portal_0ff995e647a3661062c4995b116d4336</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-26 21:39:21</sys_updated_on>
-        <theme/>
+        <sys_updated_on>2025-08-27 16:55:56</sys_updated_on>
+        <theme display_value="Mock_edx">ddba58da472be21062c4995b116d43a4</theme>
         <title>Mock SkillUP</title>
         <ts_index_group/>
         <url_suffix>mock_skillup_cliente</url_suffix>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.welcome-banner {
+  background-image: url('mock.png'); /* substitua pela URL da imagem gerada */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.welcome-banner h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>banner</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Banner</name>
+        <option_schema>[{"name":"message","section":"other","default_value":"Bem vindo(a) ao Mock SkillUP:","label":"Message","type":"string"}]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+data.username = gs.getUserDisplayName();
+	data.msgw=options.message;
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-27 12:25:54</sys_created_on>
+        <sys_id>e1876c3e47a3a61062c4995b116d4344</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>Banner</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
+        <sys_update_name>sp_widget_e1876c3e47a3a61062c4995b116d4344</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-27 14:27:48</sys_updated_on>
+        <template><![CDATA[<div class="welcome-banner">
+   <h1>{{::data.msgw}} {{::data.username}}</h1>
+</div>]]></template>
+    </sp_widget>
+</record_update>
