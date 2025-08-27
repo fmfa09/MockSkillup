@@ -6,7 +6,7 @@
         <created_by_user display_value="admin">6816f79cc0a8016401c5a33be04be441</created_by_user>
         <created_on>2025-08-20 13:13:12</created_on>
         <dashboard display_value="Mock Skillup">704f2ca447eb621062c4995b116d4362</dashboard>
-        <edit_locked>{"sysId":"6816f79cc0a8016401c5a33be04be441","name":"admin","avatar":"a5d3c898c3222010ae17dd981840dd8b.iix?t=small","lockedOn":"1755871757973"}</edit_locked>
+        <edit_locked>{"sysId":"6816f79cc0a8016401c5a33be04be441","name":"admin","avatar":"a5d3c898c3222010ae17dd981840dd8b.iix?t=small","lockedOn":"1756228426725"}</edit_locked>
         <enable_data_cache>false</enable_data_cache>
         <include_custom_insights>true</include_custom_insights>
         <include_key_contributors>true</include_key_contributors>
@@ -32,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>744f6ce447eb621062c4995b116d436a</sys_id>
-        <sys_mod_count>41</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
@@ -40,7 +40,7 @@
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>par_dashboard_user_metadata_744f6ce447eb621062c4995b116d436a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-22 14:09:17</sys_updated_on>
+        <sys_updated_on>2025-08-26 17:13:46</sys_updated_on>
         <updated_by_user display_value="admin">6816f79cc0a8016401c5a33be04be441</updated_by_user>
         <use_custom_tab_colors>false</use_custom_tab_colors>
     </par_dashboard_user_metadata>

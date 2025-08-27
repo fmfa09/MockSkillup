@@ -3,22 +3,22 @@
         <class_name/>
         <order>1</order>
         <semantic_tag/>
-        <size>4</size>
+        <size>2</size>
         <size_lg/>
         <size_sm/>
         <size_xs/>
-        <sp_row display_value="2">06319c5e47e7e21062c4995b116d4360</sp_row>
+        <sp_row display_value="1">2b91912e4763661062c4995b116d4311</sp_row>
         <sys_class_name>sp_column</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-25 21:31:18</sys_created_on>
-        <sys_id>42311c9e47e7e21062c4995b116d43e1</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_on>2025-08-26 20:51:08</sys_created_on>
+        <sys_id>eb91592e4763661062c4995b116d43a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>1</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
-        <sys_update_name>sp_column_42311c9e47e7e21062c4995b116d43e1</sys_update_name>
+        <sys_update_name>sp_column_eb91592e4763661062c4995b116d43a8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-26 20:54:23</sys_updated_on>
+        <sys_updated_on>2025-08-26 20:51:08</sys_updated_on>
     </sp_column>
 </record_update>

@@ -1,54 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function skill ($scope, $http, spUtil) {
-  var c = this;
-  c.skills = [];
-
-  // Carregar as skills do usuário logado
-  c.getSkills = function() {
-    $http.get('/api/now/table/x_967632_mock_skil_skill?sysparm_query=colaborador=' + c.data.userId)
-      .then(function(response) {
-        c.skills = response.data.result;
-      });
-  };
-
-  // Adicionar nova skill
-  c.addSkill = function() {
-    var nova = {
-      colaborador: c.data.userId,
-      skill: "Nova Skill",
-      tipo: "Automático",
-      nivel: "Iniciante"
+        <client_script><![CDATA[function SkillsController() {
+    var c = this;
+    
+    // Inicialização das variáveis
+    c.showForm = false;
+    c.editingSkill = false;
+    c.currentSkill = {};
+    c.selectedSkillType = '';
+    
+    // Dados recebidos do servidor
+    c.userSkills = c.data.userSkills || [];
+    c.otherUsersSkills = c.data.otherUsersSkills || [];
+    c.availableSkills = c.data.availableSkills || [];
+    
+    // Watch para mudanças na skill selecionada
+    c.$scope.$watch('c.currentSkill.skill', function(newVal, oldVal) {
+        if (newVal && newVal !== oldVal) {
+            c.getSkillType(newVal);
+        }
+    });
+    
+    // Função para mostrar o formulário de adição
+    c.showAddForm = function() {
+        c.showForm = true;
+        c.editingSkill = false;
+        c.currentSkill = {
+            skill: '',
+            nivel: ''
+        };
+        c.selectedSkillType = '';
     };
-    $http.post('/api/now/table/x_967632_mock_skil_skill', nova).then(function() {
-      c.getSkills();
-    });
-  };
-
-  // Atualizar skill
-  c.updateSkill = function(s) {
-    $http.patch('/api/now/table/x_967632_mock_skil_skill/' + s.sys_id, {
-      nivel: s.nivel
-    });
-  };
-
-  // Deletar skill
-  c.deleteSkill = function(s) {
-    if (c.skills.length === 1) {
-      spUtil.addErrorMessage("Você precisa ter pelo menos uma skill adicionada.");
-      return;
-    }
-    $http.delete('/api/now/table/x_967632_mock_skil_skill/' + s.sys_id).then(function() {
-      c.getSkills();
-    });
-  };
-
-  c.getSkills();
-}
-]]></client_script>
+    
+    // Função para cancelar o formulário
+    c.cancelForm = function() {
+        c.showForm = false;
+        c.editingSkill = false;
+        c.currentSkill = {};
+        c.selectedSkillType = '';
+    };
+    
+    // Função para buscar o tipo da skill selecionada
+    c.getSkillType = function(skillId) {
+        if (!skillId) return;
+        
+        var skill = c.availableSkills.find(function(s) {
+            return s.sys_id === skillId;
+        });
+        
+        if (skill) {
+            c.selectedSkillType = skill.technical;
+        }
+    };
+    
+    // Função para salvar skill
+    c.saveSkill = function() {
+        if (!c.currentSkill.skill || !c.currentSkill.nivel) {
+            c.showAlert('Por favor, preencha todos os campos obrigatórios.', 'warning');
+            return;
+        }
+        
+        var action = c.editingSkill ? 'update_skill' : 'save_skill';
+        var data = {
+            action: action,
+            skill: c.currentSkill.skill,
+            nivel: c.currentSkill.nivel
+        };
+        
+        if (c.editingSkill) {
+            data.sys_id = c.currentSkill.sys_id;
+        }
+        
+        c.server.update().then(function(response) {
+            if (c.data.success) {
+                c.showAlert(c.data.message, 'success');
+                c.cancelForm();
+                c.refreshData();
+            } else {
+                c.showAlert(c.data.message, 'danger');
+            }
+        });
+    };
+    
+    // Função para editar skill
+    c.editSkill = function(skill) {
+        c.showForm = true;
+        c.editingSkill = true;
+        c.currentSkill = {
+            sys_id: skill.sys_id,
+            skill: skill.skill,
+            nivel: skill.nivel
+        };
+        c.getSkillType(skill.skill);
+    };
+    
+    // Função para deletar skill
+    c.deleteSkill = function(skill) {
+        // Verifica se é a última skill
+        if (c.userSkills.length === 1) {
+            c.showAlert('Você precisa ter pelo menos uma skill adicionada.', 'warning');
+            return;
+        }
+        
+        if (confirm('Tem certeza de que deseja excluir esta skill?')) {
+            c.server.update({
+                action: 'delete_skill',
+                sys_id: skill.sys_id
+            }).then(function(response) {
+                if (c.data.success) {
+                    c.showAlert(c.data.message, 'success');
+                    c.refreshData();
+                } else {
+                    c.showAlert(c.data.message, 'danger');
+                }
+            });
+        }
+    };
+    
+    // Função para obter a classe CSS do nível
+    c.getNivelClass = function(nivel) {
+        switch (nivel.toLowerCase()) {
+            case 'basic':
+                return 'badge-success badge-basic';
+            case 'intermediate':
+                return 'badge-warning badge-intermediate';
+            case 'advanced':
+                return 'badge-danger badge-advanced';
+            default:
+                return 'badge-secondary';
+        }
+    };
+    
+    // Função para mostrar alertas
+    c.showAlert = function(message, type) {
+        // Implementa um sistema simples de notificação
+        var alertClass = 'alert-' + type;
+        var alertElement = angular.element(
+            '<div class="alert ' + alertClass + ' alert-dismissible fade show" role="alert">' +
+            message +
+            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+            '<span aria-hidden="true">&times;</span>' +
+            '</button>' +
+            '</div>'
+        );
+        
+        // Adiciona o alerta ao topo do container
+        angular.element('.skills-container').prepend(alertElement);
+        
+        // Remove o alerta após 5 segundos
+        setTimeout(function() {
+            alertElement.remove();
+        }, 5000);
+    };
+    
+    // Função para atualizar os dados
+    c.refreshData = function() {
+        c.server.refresh().then(function() {
+            c.userSkills = c.data.userSkills || [];
+            c.otherUsersSkills = c.data.otherUsersSkills || [];
+            c.availableSkills = c.data.availableSkills || [];
+        });
+    };
+    
+    // Função de inicialização
+    c.init = function() {
+        // Verifica se há mensagens do servidor para mostrar
+        if (c.data.message) {
+            var alertType = c.data.success ? 'success' : 'danger';
+            c.showAlert(c.data.message, alertType);
+        }
+    };
+    
+    // Executa a inicialização
+    c.init();
+}]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>&lt;style&gt;
+.skills-container {
+  padding: 20px;
+}
+
+.skills-list .card {
+  transition: transform 0.2s;
+}
+
+.skills-list .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.badge.badge-basic { background-color: #28a745; }
+.badge.badge-intermediate { background-color: #ffc107; color: #000; }
+.badge.badge-advanced { background-color: #dc3545; }
+&lt;/style&gt;</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -65,62 +210,338 @@
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-  data.userId = gs.getUserID();
-})();
-]]></script>
+    // Obtém o usuário atual
+    var currentUser = gs.getUserID();
+    data.currentUser = currentUser;
+    
+    // Inicializa arrays de dados
+    data.userSkills = [];
+    data.otherUsersSkills = [];
+    data.availableSkills = [];
+    
+    // Função para buscar skills do usuário atual usando a view
+    function getUserSkills() {
+        var userSkillsGr = new GlideRecord('x_967632_mock_skil_skill_view');
+        userSkillsGr.addQuery('funcionario', currentUser);
+        userSkillsGr.query();
+        
+        var skills = [];
+        while (userSkillsGr.next()) {
+            var skillData = {};
+            skillData.sys_id = userSkillsGr.getUniqueValue();
+            skillData.funcionario = userSkillsGr.getValue('funcionario');
+            skillData.skill = userSkillsGr.getValue('skill');
+            skillData.skill_name = userSkillsGr.getDisplayValue('skill');
+            skillData.nivel = userSkillsGr.getValue('nivel');
+            skillData.tipo = userSkillsGr.getValue('tipo');
+            
+            skills.push(skillData);
+        }
+        return skills;
+    }
+    
+    // Função para buscar skills de outros usuários usando a view
+    function getOtherUsersSkills() {
+        var otherSkillsGr = new GlideRecord('x_967632_mock_skil_skill_view');
+        otherSkillsGr.addQuery('funcionario', '!=', currentUser);
+        otherSkillsGr.query();
+        
+        var skills = [];
+        while (otherSkillsGr.next()) {
+            var skillData = {};
+            skillData.sys_id = otherSkillsGr.getUniqueValue();
+            skillData.funcionario = otherSkillsGr.getValue('funcionario');
+            skillData.skill = otherSkillsGr.getValue('skill');
+            skillData.skill_name = otherSkillsGr.getDisplayValue('skill');
+            skillData.nivel = otherSkillsGr.getValue('nivel');
+            skillData.tipo = otherSkillsGr.getValue('tipo');
+            
+            // Busca informações do funcionário
+            var userGr = new GlideRecord('sys_user');
+            if (userGr.get(skillData.funcionario)) {
+                skillData.funcionario_name = userGr.getDisplayValue();
+            }
+            
+            skills.push(skillData);
+        }
+        return skills;
+    }
+    
+    // Função para buscar todas as skills disponíveis
+    function getAvailableSkills() {
+        var skillsGr = new GlideRecord('x_967632_mock_skil_skill');
+        skillsGr.orderBy('skill');
+        skillsGr.query();
+        
+        var skills = [];
+        while (skillsGr.next()) {
+            var skill = {};
+            skill.sys_id = skillsGr.getUniqueValue();
+            skill.skill = skillsGr.getValue('skill');
+            skill.technical = skillsGr.getValue('technical');
+            skills.push(skill);
+        }
+        return skills;
+    }
+    
+    // Carrega dados iniciais
+    data.userSkills = getUserSkills();
+    data.otherUsersSkills = getOtherUsersSkills();
+    data.availableSkills = getAvailableSkills();
+    
+    // Manipulação de ações do cliente
+    if (input && input.action) {
+        
+        // Ação para salvar nova skill
+        if (input.action === 'save_skill') {
+            try {
+                var newSkillGr = new GlideRecord('x_967632_mock_skil_m2m_possui_skill');
+                newSkillGr.initialize();
+                newSkillGr.setValue('user', currentUser);
+                newSkillGr.setValue('skill', input.skill);
+                newSkillGr.setValue('nivel', input.nivel);
+                
+                var sysId = newSkillGr.insert();
+                
+                if (sysId) {
+                    data.success = true;
+                    data.message = 'Skill adicionada com sucesso!';
+                    // Recarrega as skills do usuário
+                    data.userSkills = getUserSkills();
+                } else {
+                    data.success = false;
+                    data.message = 'Erro ao adicionar skill. Tente novamente.';
+                }
+            } catch (e) {
+                data.success = false;
+                data.message = 'Erro: ' + e.message;
+            }
+        }
+        
+        // Ação para atualizar skill
+        if (input.action === 'update_skill') {
+            try {
+                // Busca o registro original na tabela M2M usando a view para validação
+                var viewGr = new GlideRecord('x_967632_mock_skil_skill_view');
+                if (viewGr.get(input.sys_id)) {
+                    // Verifica se o usuário pode editar esta skill
+                    if (viewGr.getValue('funcionario') == currentUser) {
+                        // Atualiza na tabela original M2M
+                        var updateSkillGr = new GlideRecord('x_967632_mock_skil_m2m_possui_skill');
+                        if (updateSkillGr.get(input.sys_id)) {
+                            updateSkillGr.setValue('skill', input.skill);
+                            updateSkillGr.setValue('nivel', input.nivel);
+                            updateSkillGr.update();
+                            
+                            data.success = true;
+                            data.message = 'Skill atualizada com sucesso!';
+                            // Recarrega as skills do usuário
+                            data.userSkills = getUserSkills();
+                        }
+                    } else {
+                        data.success = false;
+                        data.message = 'Você não tem permissão para editar esta skill.';
+                    }
+                } else {
+                    data.success = false;
+                    data.message = 'Skill não encontrada.';
+                }
+            } catch (e) {
+                data.success = false;
+                data.message = 'Erro: ' + e.message;
+            }
+        }
+        
+        // Ação para deletar skill
+        if (input.action === 'delete_skill') {
+            try {
+                // Busca o registro original na tabela M2M usando a view para validação
+                var viewGr = new GlideRecord('x_967632_mock_skil_skill_view');
+                if (viewGr.get(input.sys_id)) {
+                    // Verifica se o usuário pode deletar esta skill
+                    if (viewGr.getValue('funcionario') == currentUser) {
+                        // Deleta da tabela original M2M
+                        var deleteSkillGr = new GlideRecord('x_967632_mock_skil_m2m_possui_skill');
+                        if (deleteSkillGr.get(input.sys_id)) {
+                            deleteSkillGr.deleteRecord();
+                            
+                            data.success = true;
+                            data.message = 'Skill removida com sucesso!';
+                            // Recarrega as skills do usuário
+                            data.userSkills = getUserSkills();
+                        }
+                    } else {
+                        data.success = false;
+                        data.message = 'Você não tem permissão para deletar esta skill.';
+                    }
+                } else {
+                    data.success = false;
+                    data.message = 'Skill não encontrada.';
+                }
+            } catch (e) {
+                data.success = false;
+                data.message = 'Erro: ' + e.message;
+            }
+        }
+        
+        // Ação para buscar informações da skill selecionada
+        if (input.action === 'get_skill_info') {
+            var skillGr = new GlideRecord('x_967632_mock_skil_skill');
+            if (skillGr.get(input.skill_id)) {
+                data.skill_info = {
+                    technical: skillGr.getValue('technical'),
+                    skill: skillGr.getValue('skill')
+                };
+            }
+        }
+    }
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-26 02:40:35</sys_created_on>
         <sys_id>3647195a476fe21062c4995b116d43ea</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>Skills</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_967632_mock_skil">e87e82454703221062c4995b116d43a7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">e87e82454703221062c4995b116d43a7</sys_scope>
         <sys_update_name>sp_widget_3647195a476fe21062c4995b116d43ea</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-26 02:41:31</sys_updated_on>
-        <template><![CDATA[<div class="card p-3 shadow-sm">
-  <h4 class="mb-3">Minhas Skills</h4>
-
-  <!-- Botão adicionar -->
-  <button class="btn btn-primary mb-3" ng-click="c.addSkill()">Adicionar Skill</button>
-
-  <!-- Lista de skills -->
-  <table class="table table-bordered">
-    <thead class="table-dark">
-      <tr>
-        <th>Skill</th>
-        <th>Tipo</th>
-        <th>Nível</th>
-        <th>Ações</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="s in c.skills">
-        <td>{{s.skill}}</td>
-        <td>{{s.tipo}}</td>
-        <td>
-          <select class="form-select" ng-model="s.nivel" ng-change="c.updateSkill(s)">
-            <option value="Iniciante">Iniciante</option>
-            <option value="Intermediário">Intermediário</option>
-            <option value="Avançado">Avançado</option>
-            <option value="Expert">Expert</option>
+        <sys_updated_on>2025-08-26 20:06:30</sys_updated_on>
+        <template><![CDATA[<!-- Skills Widget HTML Template -->
+<div class="skills-container">
+  <h3>Minhas Skills</h3>
+  
+  <!-- Botão para adicionar nova skill -->
+  <div class="mb-3">
+    <button type="button" class="btn btn-primary" ng-click="c.showAddForm()">
+      <i class="fa fa-plus"></i> Adicionar Nova Skill
+    </button>
+  </div>
+  
+  <!-- Formulário para adicionar/editar skill -->
+  <div ng-show="c.showForm" class="card mb-4">
+    <div class="card-header">
+      <h5>{{c.editingSkill ? 'Editar Skill' : 'Nova Skill'}}</h5>
+    </div>
+    <div class="card-body">
+      <form name="skillForm">
+        <!-- Campo Skill (Dropdown) -->
+        <div class="form-group">
+          <label for="skillSelect">Skill *</label>
+          <select class="form-control" 
+                  id="skillSelect"
+                  ng-model="c.currentSkill.skill"
+                  ng-options="skill.sys_id as skill.technical for skill in c.availableSkills"
+                  required>
+            <option value="">Selecione uma skill...</option>
           </select>
-        </td>
-        <td>
-          <button class="btn btn-danger btn-sm" ng-click="c.deleteSkill(s)">Excluir</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Mensagem caso não tenha skills -->
-  <div ng-if="c.skills.length === 0" class="alert alert-warning mt-3">
-    Você precisa ter pelo menos uma skill adicionada.
+        </div>
+        
+        <!-- Campo Tipo (Readonly) -->
+        <div class="form-group">
+          <label for="tipoField">Tipo</label>
+          <input type="text" 
+                 class="form-control" 
+                 id="tipoField"
+                 ng-model="c.selectedSkillType" 
+                 readonly>
+        </div>
+        
+        <!-- Campo Nível (Dropdown) -->
+        <div class="form-group">
+          <label for="nivelSelect">Nível *</label>
+          <select class="form-control" 
+                  id="nivelSelect"
+                  ng-model="c.currentSkill.nivel"
+                  required>
+            <option value="">Selecione um nível...</option>
+            <option value="Basic">Basic</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
+        
+        <!-- Botões do formulário -->
+        <div class="form-group">
+          <button type="button" 
+                  class="btn btn-success" 
+                  ng-click="c.saveSkill()"
+                  ng-disabled="!skillForm.$valid">
+            <i class="fa fa-save"></i> {{c.editingSkill ? 'Atualizar' : 'Salvar'}}
+          </button>
+          <button type="button" 
+                  class="btn btn-secondary ml-2" 
+                  ng-click="c.cancelForm()">
+            <i class="fa fa-times"></i> Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Mensagem quando não há skills -->
+  <div ng-show="c.userSkills.length === 0 && !c.showForm" class="alert alert-info">
+    <i class="fa fa-info-circle"></i> Você precisa ter pelo menos uma skill adicionada.
+  </div>
+  
+  <!-- Lista de skills do usuário -->
+  <div ng-show="c.userSkills.length > 0" class="skills-list">
+    <h4>Suas Skills</h4>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-3" ng-repeat="skill in c.userSkills">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">{{skill.skill_name}}</h6>
+            <p class="card-text">
+              <strong>Tipo:</strong> {{skill.tipo}}<br>
+              <strong>Nível:</strong> 
+              <span class="badge" ng-class="c.getNivelClass(skill.nivel)">
+                {{skill.nivel}}
+              </span>
+            </p>
+            <div class="btn-group btn-group-sm">
+              <button type="button" 
+                      class="btn btn-outline-primary" 
+                      ng-click="c.editSkill(skill)">
+                <i class="fa fa-edit"></i> Editar
+              </button>
+              <button type="button" 
+                      class="btn btn-outline-danger" 
+                      ng-click="c.deleteSkill(skill)">
+                <i class="fa fa-trash"></i> Excluir
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Skills de outros usuários -->
+  <div ng-show="c.otherUsersSkills.length > 0" class="mt-4">
+    <h4>Skills de Outros Usuários</h4>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-3" ng-repeat="skill in c.otherUsersSkills">
+        <div class="card border-secondary">
+          <div class="card-body">
+            <h6 class="card-title">{{skill.skill_name}}</h6>
+            <p class="card-text">
+              <strong>Usuário:</strong> {{skill.funcionario_name}}<br>
+              <strong>Tipo:</strong> {{skill.tipo}}<br>
+              <strong>Nível:</strong> 
+              <span class="badge" ng-class="c.getNivelClass(skill.nivel)">
+                {{skill.nivel}}
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
 ]]></template>
     </sp_widget>
 </record_update>

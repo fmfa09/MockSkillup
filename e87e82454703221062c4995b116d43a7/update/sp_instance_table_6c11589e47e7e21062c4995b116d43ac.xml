@@ -16,7 +16,7 @@
         <roles/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="3">42311c9e47e7e21062c4995b116d43e1</sp_column>
+        <sp_column display_value="1">42311c9e47e7e21062c4995b116d43e1</sp_column>
         <sp_page/>
         <sp_widget display_value="Notice MockSkillup">3cc6445247e7e21062c4995b116d4336</sp_widget>
         <sys_class_name>sp_instance_table</sys_class_name>
